@@ -173,9 +173,31 @@ except subprocess.CalledProcessError as e:
     print("\n  Note: You may need to authenticate or check your remote URL")
     sys.exit(1)
 
+# Generate raw GitHub URL for processed_data.json
+def generate_raw_url(remote_url, commit_hash):
+    """Generate raw.githubusercontent.com URL from git remote URL"""
+    # Remove .git suffix if present
+    url = remote_url.replace('.git', '')
+
+    # Extract username and repo from GitHub URL
+    # Format: https://github.com/username/repo or git@github.com:username/repo
+    if 'github.com/' in url:
+        parts = url.split('github.com/')[-1].split('/')
+        if len(parts) >= 2:
+            username = parts[0]
+            repo = parts[1]
+            raw_url = f"https://raw.githubusercontent.com/{username}/{repo}/{commit_hash}/configs/processed_data.json"
+            return raw_url
+    return None
+
+raw_url = generate_raw_url(remote_url, commit_hash)
+
 print("\n" + "=" * 60)
 print("✓ Successfully pushed to GitHub!")
 print(f"  Commit: {commit_hash}")
 print(f"  Branch: {branch_name}")
 print(f"  Remote: {remote_url}")
+if raw_url:
+    print(f"\n  Raw Data URL:")
+    print(f"  {raw_url}")
 print("=" * 60)
