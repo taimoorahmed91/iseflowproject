@@ -119,14 +119,39 @@ except subprocess.CalledProcessError as e:
 # Commit changes
 print("\n[6/6] Committing and pushing...")
 try:
-    subprocess.run(["git", "commit", "-m", commit_message], check=True)
-    print("  ✓ Changes committed")
+    result = subprocess.run(
+        ["git", "commit", "-m", commit_message],
+        capture_output=True,
+        text=True,
+        check=True
+    )
+
+    # Get the commit hash
+    commit_hash_result = subprocess.run(
+        ["git", "rev-parse", "--short", "HEAD"],
+        capture_output=True,
+        text=True,
+        check=True
+    )
+    commit_hash = commit_hash_result.stdout.strip()
+
+    print(f"  ✓ Changes committed")
+    print(f"  → Commit ID: {commit_hash}")
 except subprocess.CalledProcessError as e:
     print(f"  ✗ Failed to commit: {e}")
     sys.exit(1)
 
 # Push to remote
 try:
+    # Get current branch name
+    branch_result = subprocess.run(
+        ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+        capture_output=True,
+        text=True,
+        check=True
+    )
+    branch_name = branch_result.stdout.strip()
+
     # Check if branch has upstream
     result = subprocess.run(
         ["git", "rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}"],
@@ -136,12 +161,13 @@ try:
 
     if result.returncode != 0:
         # No upstream, set it
-        subprocess.run(["git", "push", "-u", "origin", "main"], check=True)
+        subprocess.run(["git", "push", "-u", "origin", branch_name], check=True)
     else:
         # Upstream exists, just push
         subprocess.run(["git", "push"], check=True)
 
-    print("  ✓ Changes pushed to remote")
+    print(f"  ✓ Changes pushed to remote")
+    print(f"  → Branch: {branch_name}")
 except subprocess.CalledProcessError as e:
     print(f"  ✗ Failed to push: {e}")
     print("\n  Note: You may need to authenticate or check your remote URL")
@@ -149,4 +175,7 @@ except subprocess.CalledProcessError as e:
 
 print("\n" + "=" * 60)
 print("✓ Successfully pushed to GitHub!")
+print(f"  Commit: {commit_hash}")
+print(f"  Branch: {branch_name}")
+print(f"  Remote: {remote_url}")
 print("=" * 60)
