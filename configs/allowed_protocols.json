@@ -1,0 +1,27 @@
+{
+  "SearchResult": {
+    "total": 2,
+    "resources": [
+      {
+        "id": "926901b0-8c01-11e6-996c-525400b48521",
+        "name": "Default Device Admin",
+        "description": "Default Allowed Protocol Service Device Admin",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.215/ers/config/allowedprotocols/926901b0-8c01-11e6-996c-525400b48521",
+          "type": "application/json"
+        }
+      },
+      {
+        "id": "92613980-8c01-11e6-996c-525400b48521",
+        "name": "Default Network Access",
+        "description": "Default Allowed Protocol Service",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.215/ers/config/allowedprotocols/92613980-8c01-11e6-996c-525400b48521",
+          "type": "application/json"
+        }
+      }
+    ]
+  }
+}
