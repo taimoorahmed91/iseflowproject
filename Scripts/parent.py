@@ -16,7 +16,9 @@ scripts = [
     "policysets.py",
     "authentication.py",
     "authorization.py",
-    "process_ise_data.py"
+    "process_ise_data.py",
+    "tree.py",
+    "dynamic_tree.py"
 ]
 
 print("=" * 60)

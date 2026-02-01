@@ -1,0 +1,40 @@
+I have an ISE (Identity Services Engine) authorization policy configuration file in JSON format. I need you to analyze this file and create a hierarchical decision tree structure.
+CONTEXT:
+
+The file contains policy sets with authorization rules
+Each authorization rule has a rank (sequence number) that determines evaluation order (lower rank = evaluated first)
+Each rule has conditions (in ConditionAndBlock with children array) that check attributes like rVLAN, NetworkZone, Tenant, etc.
+Each rule has a profile that is the result/outcome if conditions match
+
+WHAT I NEED:
+Create a decision tree that shows how ISE evaluates these policies in a hierarchical flow.
+TREE STRUCTURE:
+
+Top Level: All unique rVLAN values found across all rules
+Second Level: Under each rVLAN, all unique NetworkZone values that appear with that rVLAN
+Third Level: Under each NetworkZone, all unique Tenant values that appear with that NetworkZone
+Leaf Nodes: The authorization profile (result) and the rule rank/name
+
+REQUIREMENTS:
+
+Process rules in order by their rank value (ascending)
+Extract all conditions from each rule's condition.children array
+Build the tree showing all possible paths through the conditions
+At each leaf node, show: rule name, rank, and the resulting authorization profile
+If a rule has missing attributes (e.g., only rVLAN and Tenant, no NetworkZone), handle it appropriately
+
+OUTPUT FORMAT:
+Please provide the decision tree in one of these formats:
+
+Nested JSON structure
+Mermaid flowchart syntax
+Text-based tree diagram
+Python dictionary structure
+
+IMPORTANT:
+
+The hierarchy order is: rVLAN → NetworkZone → Tenant → Result
+Rules are evaluated top-to-bottom based on rank
+Show which rule creates each path in the tree
+
+the JSON file is processed_data.json

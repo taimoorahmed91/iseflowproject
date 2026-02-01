@@ -1,0 +1,2503 @@
+{
+  "metadata": {
+    "generated_at": "2026-02-01T11:43:52.023362Z",
+    "source_file": "/Users/taimoorahmed/Desktop/iseflowproject/configs/processed_data.json",
+    "total_rules": 114
+  },
+  "summary": {
+    "total_rules": 114,
+    "endpoint_attribute_rules": 100,
+    "other_rules": 14,
+    "unique_values": {
+      "rVLAN": [
+        "Value1",
+        "Value2",
+        "Value3",
+        "Value4"
+      ],
+      "NetworkZone": [
+        "Value1",
+        "Value2",
+        "Value3",
+        "Value4"
+      ],
+      "Tenant": [
+        "Value1",
+        "Value2",
+        "Value3",
+        "Value4"
+      ]
+    }
+  },
+  "mermaid_flowchart": "flowchart TD\n    Start([ISE Authorization<br/>rVLAN \u2192 NetworkZone \u2192 Tenant])\n\n    N1{{<b>rVLAN</b><br/>Not Specified}}\n    N2{{<b>rVLAN</b><br/>Value1}}\n    N3{{<b>rVLAN</b><br/>Value2}}\n    N4{{<b>rVLAN</b><br/>Value3}}\n    N5{{<b>rVLAN</b><br/>Value4}}\n\n    N6{{<b>NetworkZone</b><br/>Value1}}\n    N7{{<b>NetworkZone</b><br/>Not Specified}}\n    N8{{<b>NetworkZone</b><br/>Value1}}\n    N9{{<b>NetworkZone</b><br/>Value2}}\n    N10{{<b>NetworkZone</b><br/>Value3}}\n    N11{{<b>NetworkZone</b><br/>Value4}}\n    N12{{<b>NetworkZone</b><br/>Not Specified}}\n    N13{{<b>NetworkZone</b><br/>Value1}}\n    N14{{<b>NetworkZone</b><br/>Value2}}\n    N15{{<b>NetworkZone</b><br/>Value3}}\n    N16{{<b>NetworkZone</b><br/>Value4}}\n    N17{{<b>NetworkZone</b><br/>Not Specified}}\n    N18{{<b>NetworkZone</b><br/>Value1}}\n    N19{{<b>NetworkZone</b><br/>Value2}}\n    N20{{<b>NetworkZone</b><br/>Value3}}\n    N21{{<b>NetworkZone</b><br/>Value4}}\n    N22{{<b>NetworkZone</b><br/>Not Specified}}\n    N23{{<b>NetworkZone</b><br/>Value1}}\n    N24{{<b>NetworkZone</b><br/>Value2}}\n    N25{{<b>NetworkZone</b><br/>Value3}}\n    N26{{<b>NetworkZone</b><br/>Value4}}\n\n    N27{{<b>Tenant</b><br/>Value1}}\n    N28{{<b>Tenant</b><br/>Value2}}\n    N29{{<b>Tenant</b><br/>Value3}}\n    N30{{<b>Tenant</b><br/>Value4}}\n    N31{{<b>Tenant</b><br/>Value1}}\n    N32{{<b>Tenant</b><br/>Value2}}\n    N33{{<b>Tenant</b><br/>Value3}}\n    N34{{<b>Tenant</b><br/>Value4}}\n    N35{{<b>Tenant</b><br/>Not Specified}}\n    N36{{<b>Tenant</b><br/>Value1}}\n    N37{{<b>Tenant</b><br/>Value2}}\n    N38{{<b>Tenant</b><br/>Value3}}\n    N39{{<b>Tenant</b><br/>Value4}}\n    N40{{<b>Tenant</b><br/>Not Specified}}\n    N41{{<b>Tenant</b><br/>Value1}}\n    N42{{<b>Tenant</b><br/>Value2}}\n    N43{{<b>Tenant</b><br/>Value3}}\n    N44{{<b>Tenant</b><br/>Value4}}\n    N45{{<b>Tenant</b><br/>Not Specified}}\n    N46{{<b>Tenant</b><br/>Value1}}\n    N47{{<b>Tenant</b><br/>Value2}}\n    N48{{<b>Tenant</b><br/>Value3}}\n    N49{{<b>Tenant</b><br/>Value4}}\n    N50{{<b>Tenant</b><br/>Not Specified}}\n    N51{{<b>Tenant</b><br/>Value1}}\n    N52{{<b>Tenant</b><br/>Value2}}\n    N53{{<b>Tenant</b><br/>Value3}}\n    N54{{<b>Tenant</b><br/>Value4}}\n    N55{{<b>Tenant</b><br/>Value1}}\n    N56{{<b>Tenant</b><br/>Value2}}\n    N57{{<b>Tenant</b><br/>Value3}}\n    N58{{<b>Tenant</b><br/>Value4}}\n    N59{{<b>Tenant</b><br/>Not Specified}}\n    N60{{<b>Tenant</b><br/>Value1}}\n    N61{{<b>Tenant</b><br/>Value2}}\n    N62{{<b>Tenant</b><br/>Value3}}\n    N63{{<b>Tenant</b><br/>Value4}}\n    N64{{<b>Tenant</b><br/>Not Specified}}\n    N65{{<b>Tenant</b><br/>Value1}}\n    N66{{<b>Tenant</b><br/>Value2}}\n    N67{{<b>Tenant</b><br/>Value3}}\n    N68{{<b>Tenant</b><br/>Value4}}\n    N69{{<b>Tenant</b><br/>Not Specified}}\n    N70{{<b>Tenant</b><br/>Value1}}\n    N71{{<b>Tenant</b><br/>Value2}}\n    N72{{<b>Tenant</b><br/>Value3}}\n    N73{{<b>Tenant</b><br/>Value4}}\n    N74{{<b>Tenant</b><br/>Not Specified}}\n    N75{{<b>Tenant</b><br/>Value1}}\n    N76{{<b>Tenant</b><br/>Value2}}\n    N77{{<b>Tenant</b><br/>Value3}}\n    N78{{<b>Tenant</b><br/>Value4}}\n    N79{{<b>Tenant</b><br/>Value1}}\n    N80{{<b>Tenant</b><br/>Value2}}\n    N81{{<b>Tenant</b><br/>Value3}}\n    N82{{<b>Tenant</b><br/>Value4}}\n    N83{{<b>Tenant</b><br/>Not Specified}}\n    N84{{<b>Tenant</b><br/>Value1}}\n    N85{{<b>Tenant</b><br/>Value2}}\n    N86{{<b>Tenant</b><br/>Value3}}\n    N87{{<b>Tenant</b><br/>Value4}}\n    N88{{<b>Tenant</b><br/>Not Specified}}\n    N89{{<b>Tenant</b><br/>Value1}}\n    N90{{<b>Tenant</b><br/>Value2}}\n    N91{{<b>Tenant</b><br/>Value3}}\n    N92{{<b>Tenant</b><br/>Value4}}\n    N93{{<b>Tenant</b><br/>Not Specified}}\n    N94{{<b>Tenant</b><br/>Value1}}\n    N95{{<b>Tenant</b><br/>Value2}}\n    N96{{<b>Tenant</b><br/>Value3}}\n    N97{{<b>Tenant</b><br/>Value4}}\n    N98{{<b>Tenant</b><br/>Not Specified}}\n    N99{{<b>Tenant</b><br/>Value1}}\n    N100{{<b>Tenant</b><br/>Value2}}\n    N101{{<b>Tenant</b><br/>Value3}}\n    N102{{<b>Tenant</b><br/>Value4}}\n    N103{{<b>Tenant</b><br/>Value1}}\n    N104{{<b>Tenant</b><br/>Value2}}\n    N105{{<b>Tenant</b><br/>Value3}}\n    N106{{<b>Tenant</b><br/>Value4}}\n    N107{{<b>Tenant</b><br/>Not Specified}}\n    N108{{<b>Tenant</b><br/>Value1}}\n    N109{{<b>Tenant</b><br/>Value2}}\n    N110{{<b>Tenant</b><br/>Value3}}\n    N111{{<b>Tenant</b><br/>Value4}}\n    N112{{<b>Tenant</b><br/>Not Specified}}\n    N113{{<b>Tenant</b><br/>Value1}}\n    N114{{<b>Tenant</b><br/>Value2}}\n    N115{{<b>Tenant</b><br/>Value3}}\n    N116{{<b>Tenant</b><br/>Value4}}\n    N117{{<b>Tenant</b><br/>Not Specified}}\n    N118{{<b>Tenant</b><br/>Value1}}\n    N119{{<b>Tenant</b><br/>Value2}}\n    N120{{<b>Tenant</b><br/>Value3}}\n    N121{{<b>Tenant</b><br/>Value4}}\n    N122{{<b>Tenant</b><br/>Not Specified}}\n    N123{{<b>Tenant</b><br/>Value1}}\n    N124{{<b>Tenant</b><br/>Value2}}\n    N125{{<b>Tenant</b><br/>Value3}}\n    N126{{<b>Tenant</b><br/>Value4}}\n\n    N127[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_97<br/><b>Rank:</b> 96]\n    N128[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_98<br/><b>Rank:</b> 97]\n    N129[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_99<br/><b>Rank:</b> 98]\n    N130[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_100<br/><b>Rank:</b> 99]\n    N131[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_65<br/><b>Rank:</b> 64]\n    N132[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_69<br/><b>Rank:</b> 68]\n    N133[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_73<br/><b>Rank:</b> 72]\n    N134[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_77<br/><b>Rank:</b> 76]\n    N135[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_81<br/><b>Rank:</b> 80]\n    N136[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_1<br/><b>Rank:</b> 0]\n    N137[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_5<br/><b>Rank:</b> 4]\n    N138[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_9<br/><b>Rank:</b> 8]\n    N139[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_13<br/><b>Rank:</b> 12]\n    N140[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_85<br/><b>Rank:</b> 84]\n    N141[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_17<br/><b>Rank:</b> 16]\n    N142[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_21<br/><b>Rank:</b> 20]\n    N143[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_25<br/><b>Rank:</b> 24]\n    N144[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_29<br/><b>Rank:</b> 28]\n    N145[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_89<br/><b>Rank:</b> 88]\n    N146[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_33<br/><b>Rank:</b> 32]\n    N147[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_37<br/><b>Rank:</b> 36]\n    N148[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_41<br/><b>Rank:</b> 40]\n    N149[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_45<br/><b>Rank:</b> 44]\n    N150[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_93<br/><b>Rank:</b> 92]\n    N151[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_49<br/><b>Rank:</b> 48]\n    N152[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_53<br/><b>Rank:</b> 52]\n    N153[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_57<br/><b>Rank:</b> 56]\n    N154[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_61<br/><b>Rank:</b> 60]\n    N155[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_66<br/><b>Rank:</b> 65]\n    N156[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_70<br/><b>Rank:</b> 69]\n    N157[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_74<br/><b>Rank:</b> 73]\n    N158[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_78<br/><b>Rank:</b> 77]\n    N159[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_82<br/><b>Rank:</b> 81]\n    N160[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_2<br/><b>Rank:</b> 1]\n    N161[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_6<br/><b>Rank:</b> 5]\n    N162[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_10<br/><b>Rank:</b> 9]\n    N163[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_14<br/><b>Rank:</b> 13]\n    N164[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_86<br/><b>Rank:</b> 85]\n    N165[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_18<br/><b>Rank:</b> 17]\n    N166[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_22<br/><b>Rank:</b> 21]\n    N167[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_26<br/><b>Rank:</b> 25]\n    N168[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_30<br/><b>Rank:</b> 29]\n    N169[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_90<br/><b>Rank:</b> 89]\n    N170[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_34<br/><b>Rank:</b> 33]\n    N171[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_38<br/><b>Rank:</b> 37]\n    N172[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_42<br/><b>Rank:</b> 41]\n    N173[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_46<br/><b>Rank:</b> 45]\n    N174[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_94<br/><b>Rank:</b> 93]\n    N175[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_50<br/><b>Rank:</b> 49]\n    N176[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_54<br/><b>Rank:</b> 53]\n    N177[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_58<br/><b>Rank:</b> 57]\n    N178[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_62<br/><b>Rank:</b> 61]\n    N179[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_67<br/><b>Rank:</b> 66]\n    N180[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_71<br/><b>Rank:</b> 70]\n    N181[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_75<br/><b>Rank:</b> 74]\n    N182[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_79<br/><b>Rank:</b> 78]\n    N183[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_83<br/><b>Rank:</b> 82]\n    N184[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_3<br/><b>Rank:</b> 2]\n    N185[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_7<br/><b>Rank:</b> 6]\n    N186[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_11<br/><b>Rank:</b> 10]\n    N187[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_15<br/><b>Rank:</b> 14]\n    N188[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_87<br/><b>Rank:</b> 86]\n    N189[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_19<br/><b>Rank:</b> 18]\n    N190[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_23<br/><b>Rank:</b> 22]\n    N191[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_27<br/><b>Rank:</b> 26]\n    N192[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_31<br/><b>Rank:</b> 30]\n    N193[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_91<br/><b>Rank:</b> 90]\n    N194[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_35<br/><b>Rank:</b> 34]\n    N195[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_39<br/><b>Rank:</b> 38]\n    N196[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_43<br/><b>Rank:</b> 42]\n    N197[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_47<br/><b>Rank:</b> 46]\n    N198[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_95<br/><b>Rank:</b> 94]\n    N199[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_51<br/><b>Rank:</b> 50]\n    N200[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_55<br/><b>Rank:</b> 54]\n    N201[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_59<br/><b>Rank:</b> 58]\n    N202[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_63<br/><b>Rank:</b> 62]\n    N203[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_68<br/><b>Rank:</b> 67]\n    N204[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_72<br/><b>Rank:</b> 71]\n    N205[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_76<br/><b>Rank:</b> 75]\n    N206[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_80<br/><b>Rank:</b> 79]\n    N207[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_84<br/><b>Rank:</b> 83]\n    N208[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_4<br/><b>Rank:</b> 3]\n    N209[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_8<br/><b>Rank:</b> 7]\n    N210[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_12<br/><b>Rank:</b> 11]\n    N211[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_16<br/><b>Rank:</b> 15]\n    N212[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_88<br/><b>Rank:</b> 87]\n    N213[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_20<br/><b>Rank:</b> 19]\n    N214[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_24<br/><b>Rank:</b> 23]\n    N215[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_28<br/><b>Rank:</b> 27]\n    N216[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_32<br/><b>Rank:</b> 31]\n    N217[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_92<br/><b>Rank:</b> 91]\n    N218[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_36<br/><b>Rank:</b> 35]\n    N219[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_40<br/><b>Rank:</b> 39]\n    N220[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_44<br/><b>Rank:</b> 43]\n    N221[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_48<br/><b>Rank:</b> 47]\n    N222[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_96<br/><b>Rank:</b> 95]\n    N223[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_52<br/><b>Rank:</b> 51]\n    N224[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_56<br/><b>Rank:</b> 55]\n    N225[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_60<br/><b>Rank:</b> 59]\n    N226[<b>Profile:</b> PermitAccess<br/><b>Rule:</b> Auth_Rule_64<br/><b>Rank:</b> 63]\n\n    %% Connections\n    Start --> N1\n    Start --> N2\n    Start --> N3\n    Start --> N4\n    Start --> N5\n    N1 --> N6\n    N2 --> N7\n    N2 --> N8\n    N2 --> N9\n    N2 --> N10\n    N2 --> N11\n    N3 --> N12\n    N3 --> N13\n    N3 --> N14\n    N3 --> N15\n    N3 --> N16\n    N4 --> N17\n    N4 --> N18\n    N4 --> N19\n    N4 --> N20\n    N4 --> N21\n    N5 --> N22\n    N5 --> N23\n    N5 --> N24\n    N5 --> N25\n    N5 --> N26\n    N6 --> N27\n    N6 --> N28\n    N6 --> N29\n    N6 --> N30\n    N7 --> N31\n    N7 --> N32\n    N7 --> N33\n    N7 --> N34\n    N8 --> N35\n    N8 --> N36\n    N8 --> N37\n    N8 --> N38\n    N8 --> N39\n    N9 --> N40\n    N9 --> N41\n    N9 --> N42\n    N9 --> N43\n    N9 --> N44\n    N10 --> N45\n    N10 --> N46\n    N10 --> N47\n    N10 --> N48\n    N10 --> N49\n    N11 --> N50\n    N11 --> N51\n    N11 --> N52\n    N11 --> N53\n    N11 --> N54\n    N12 --> N55\n    N12 --> N56\n    N12 --> N57\n    N12 --> N58\n    N13 --> N59\n    N13 --> N60\n    N13 --> N61\n    N13 --> N62\n    N13 --> N63\n    N14 --> N64\n    N14 --> N65\n    N14 --> N66\n    N14 --> N67\n    N14 --> N68\n    N15 --> N69\n    N15 --> N70\n    N15 --> N71\n    N15 --> N72\n    N15 --> N73\n    N16 --> N74\n    N16 --> N75\n    N16 --> N76\n    N16 --> N77\n    N16 --> N78\n    N17 --> N79\n    N17 --> N80\n    N17 --> N81\n    N17 --> N82\n    N18 --> N83\n    N18 --> N84\n    N18 --> N85\n    N18 --> N86\n    N18 --> N87\n    N19 --> N88\n    N19 --> N89\n    N19 --> N90\n    N19 --> N91\n    N19 --> N92\n    N20 --> N93\n    N20 --> N94\n    N20 --> N95\n    N20 --> N96\n    N20 --> N97\n    N21 --> N98\n    N21 --> N99\n    N21 --> N100\n    N21 --> N101\n    N21 --> N102\n    N22 --> N103\n    N22 --> N104\n    N22 --> N105\n    N22 --> N106\n    N23 --> N107\n    N23 --> N108\n    N23 --> N109\n    N23 --> N110\n    N23 --> N111\n    N24 --> N112\n    N24 --> N113\n    N24 --> N114\n    N24 --> N115\n    N24 --> N116\n    N25 --> N117\n    N25 --> N118\n    N25 --> N119\n    N25 --> N120\n    N25 --> N121\n    N26 --> N122\n    N26 --> N123\n    N26 --> N124\n    N26 --> N125\n    N26 --> N126\n    N27 --> N127\n    N28 --> N128\n    N29 --> N129\n    N30 --> N130\n    N31 --> N131\n    N32 --> N132\n    N33 --> N133\n    N34 --> N134\n    N35 --> N135\n    N36 --> N136\n    N37 --> N137\n    N38 --> N138\n    N39 --> N139\n    N40 --> N140\n    N41 --> N141\n    N42 --> N142\n    N43 --> N143\n    N44 --> N144\n    N45 --> N145\n    N46 --> N146\n    N47 --> N147\n    N48 --> N148\n    N49 --> N149\n    N50 --> N150\n    N51 --> N151\n    N52 --> N152\n    N53 --> N153\n    N54 --> N154\n    N55 --> N155\n    N56 --> N156\n    N57 --> N157\n    N58 --> N158\n    N59 --> N159\n    N60 --> N160\n    N61 --> N161\n    N62 --> N162\n    N63 --> N163\n    N64 --> N164\n    N65 --> N165\n    N66 --> N166\n    N67 --> N167\n    N68 --> N168\n    N69 --> N169\n    N70 --> N170\n    N71 --> N171\n    N72 --> N172\n    N73 --> N173\n    N74 --> N174\n    N75 --> N175\n    N76 --> N176\n    N77 --> N177\n    N78 --> N178\n    N79 --> N179\n    N80 --> N180\n    N81 --> N181\n    N82 --> N182\n    N83 --> N183\n    N84 --> N184\n    N85 --> N185\n    N86 --> N186\n    N87 --> N187\n    N88 --> N188\n    N89 --> N189\n    N90 --> N190\n    N91 --> N191\n    N92 --> N192\n    N93 --> N193\n    N94 --> N194\n    N95 --> N195\n    N96 --> N196\n    N97 --> N197\n    N98 --> N198\n    N99 --> N199\n    N100 --> N200\n    N101 --> N201\n    N102 --> N202\n    N103 --> N203\n    N104 --> N204\n    N105 --> N205\n    N106 --> N206\n    N107 --> N207\n    N108 --> N208\n    N109 --> N209\n    N110 --> N210\n    N111 --> N211\n    N112 --> N212\n    N113 --> N213\n    N114 --> N214\n    N115 --> N215\n    N116 --> N216\n    N117 --> N217\n    N118 --> N218\n    N119 --> N219\n    N120 --> N220\n    N121 --> N221\n    N122 --> N222\n    N123 --> N223\n    N124 --> N224\n    N125 --> N225\n    N126 --> N226\n\n    %% Styling\n    classDef startStyle fill:#e1f5ff,stroke:#01579b,stroke-width:3px,color:#000\n    classDef rvlanStyle fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000\n    classDef zoneStyle fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#000\n    classDef tenantStyle fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000\n    classDef resultStyle fill:#ffebee,stroke:#b71c1c,stroke-width:2px,color:#000\n\n    class Start startStyle\n    class N1 rvlanStyle\n    class N2 rvlanStyle\n    class N3 rvlanStyle\n    class N4 rvlanStyle\n    class N5 rvlanStyle\n    class N6 zoneStyle\n    class N7 zoneStyle\n    class N8 zoneStyle\n    class N9 zoneStyle\n    class N10 zoneStyle\n    class N11 zoneStyle\n    class N12 zoneStyle\n    class N13 zoneStyle\n    class N14 zoneStyle\n    class N15 zoneStyle\n    class N16 zoneStyle\n    class N17 zoneStyle\n    class N18 zoneStyle\n    class N19 zoneStyle\n    class N20 zoneStyle\n    class N21 zoneStyle\n    class N22 zoneStyle\n    class N23 zoneStyle\n    class N24 zoneStyle\n    class N25 zoneStyle\n    class N26 zoneStyle\n    class N27 tenantStyle\n    class N28 tenantStyle\n    class N29 tenantStyle\n    class N30 tenantStyle\n    class N31 tenantStyle\n    class N32 tenantStyle\n    class N33 tenantStyle\n    class N34 tenantStyle\n    class N35 tenantStyle\n    class N36 tenantStyle\n    class N37 tenantStyle\n    class N38 tenantStyle\n    class N39 tenantStyle\n    class N40 tenantStyle\n    class N41 tenantStyle\n    class N42 tenantStyle\n    class N43 tenantStyle\n    class N44 tenantStyle\n    class N45 tenantStyle\n    class N46 tenantStyle\n    class N47 tenantStyle\n    class N48 tenantStyle\n    class N49 tenantStyle\n    class N50 tenantStyle\n    class N51 tenantStyle\n    class N52 tenantStyle\n    class N53 tenantStyle\n    class N54 tenantStyle\n    class N55 tenantStyle\n    class N56 tenantStyle\n    class N57 tenantStyle\n    class N58 tenantStyle\n    class N59 tenantStyle\n    class N60 tenantStyle\n    class N61 tenantStyle\n    class N62 tenantStyle\n    class N63 tenantStyle\n    class N64 tenantStyle\n    class N65 tenantStyle\n    class N66 tenantStyle\n    class N67 tenantStyle\n    class N68 tenantStyle\n    class N69 tenantStyle\n    class N70 tenantStyle\n    class N71 tenantStyle\n    class N72 tenantStyle\n    class N73 tenantStyle\n    class N74 tenantStyle\n    class N75 tenantStyle\n    class N76 tenantStyle\n    class N77 tenantStyle\n    class N78 tenantStyle\n    class N79 tenantStyle\n    class N80 tenantStyle\n    class N81 tenantStyle\n    class N82 tenantStyle\n    class N83 tenantStyle\n    class N84 tenantStyle\n    class N85 tenantStyle\n    class N86 tenantStyle\n    class N87 tenantStyle\n    class N88 tenantStyle\n    class N89 tenantStyle\n    class N90 tenantStyle\n    class N91 tenantStyle\n    class N92 tenantStyle\n    class N93 tenantStyle\n    class N94 tenantStyle\n    class N95 tenantStyle\n    class N96 tenantStyle\n    class N97 tenantStyle\n    class N98 tenantStyle\n    class N99 tenantStyle\n    class N100 tenantStyle\n    class N101 tenantStyle\n    class N102 tenantStyle\n    class N103 tenantStyle\n    class N104 tenantStyle\n    class N105 tenantStyle\n    class N106 tenantStyle\n    class N107 tenantStyle\n    class N108 tenantStyle\n    class N109 tenantStyle\n    class N110 tenantStyle\n    class N111 tenantStyle\n    class N112 tenantStyle\n    class N113 tenantStyle\n    class N114 tenantStyle\n    class N115 tenantStyle\n    class N116 tenantStyle\n    class N117 tenantStyle\n    class N118 tenantStyle\n    class N119 tenantStyle\n    class N120 tenantStyle\n    class N121 tenantStyle\n    class N122 tenantStyle\n    class N123 tenantStyle\n    class N124 tenantStyle\n    class N125 tenantStyle\n    class N126 tenantStyle\n    class N127 resultStyle\n    class N128 resultStyle\n    class N129 resultStyle\n    class N130 resultStyle\n    class N131 resultStyle\n    class N132 resultStyle\n    class N133 resultStyle\n    class N134 resultStyle\n    class N135 resultStyle\n    class N136 resultStyle\n    class N137 resultStyle\n    class N138 resultStyle\n    class N139 resultStyle\n    class N140 resultStyle\n    class N141 resultStyle\n    class N142 resultStyle\n    class N143 resultStyle\n    class N144 resultStyle\n    class N145 resultStyle\n    class N146 resultStyle\n    class N147 resultStyle\n    class N148 resultStyle\n    class N149 resultStyle\n    class N150 resultStyle\n    class N151 resultStyle\n    class N152 resultStyle\n    class N153 resultStyle\n    class N154 resultStyle\n    class N155 resultStyle\n    class N156 resultStyle\n    class N157 resultStyle\n    class N158 resultStyle\n    class N159 resultStyle\n    class N160 resultStyle\n    class N161 resultStyle\n    class N162 resultStyle\n    class N163 resultStyle\n    class N164 resultStyle\n    class N165 resultStyle\n    class N166 resultStyle\n    class N167 resultStyle\n    class N168 resultStyle\n    class N169 resultStyle\n    class N170 resultStyle\n    class N171 resultStyle\n    class N172 resultStyle\n    class N173 resultStyle\n    class N174 resultStyle\n    class N175 resultStyle\n    class N176 resultStyle\n    class N177 resultStyle\n    class N178 resultStyle\n    class N179 resultStyle\n    class N180 resultStyle\n    class N181 resultStyle\n    class N182 resultStyle\n    class N183 resultStyle\n    class N184 resultStyle\n    class N185 resultStyle\n    class N186 resultStyle\n    class N187 resultStyle\n    class N188 resultStyle\n    class N189 resultStyle\n    class N190 resultStyle\n    class N191 resultStyle\n    class N192 resultStyle\n    class N193 resultStyle\n    class N194 resultStyle\n    class N195 resultStyle\n    class N196 resultStyle\n    class N197 resultStyle\n    class N198 resultStyle\n    class N199 resultStyle\n    class N200 resultStyle\n    class N201 resultStyle\n    class N202 resultStyle\n    class N203 resultStyle\n    class N204 resultStyle\n    class N205 resultStyle\n    class N206 resultStyle\n    class N207 resultStyle\n    class N208 resultStyle\n    class N209 resultStyle\n    class N210 resultStyle\n    class N211 resultStyle\n    class N212 resultStyle\n    class N213 resultStyle\n    class N214 resultStyle\n    class N215 resultStyle\n    class N216 resultStyle\n    class N217 resultStyle\n    class N218 resultStyle\n    class N219 resultStyle\n    class N220 resultStyle\n    class N221 resultStyle\n    class N222 resultStyle\n    class N223 resultStyle\n    class N224 resultStyle\n    class N225 resultStyle\n    class N226 resultStyle",
+  "paths": [
+    {
+      "path_id": 1,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value1",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 0,
+      "rule_name": "Auth_Rule_1",
+      "rule_id": "7864915f-500b-4bc5-aa47-38f79151c123",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 2,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value1",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 1,
+      "rule_name": "Auth_Rule_2",
+      "rule_id": "22ab31e6-5a13-448d-b06a-8b03af3fb6b2",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 3,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value1",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 2,
+      "rule_name": "Auth_Rule_3",
+      "rule_id": "d6988702-a8e3-4f34-81a8-d90570d13a57",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 4,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value1",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 3,
+      "rule_name": "Auth_Rule_4",
+      "rule_id": "b535de8e-622e-41b2-aa40-1f53508ac03b",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 5,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value1",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 4,
+      "rule_name": "Auth_Rule_5",
+      "rule_id": "ff561336-f93a-4d39-a45c-31caf23ff674",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 6,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value1",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 5,
+      "rule_name": "Auth_Rule_6",
+      "rule_id": "19d557e1-3114-403b-ab25-3953ca23606c",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 7,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value1",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 6,
+      "rule_name": "Auth_Rule_7",
+      "rule_id": "d8c93843-34ed-4331-b903-93dc9dd96be2",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 8,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value1",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 7,
+      "rule_name": "Auth_Rule_8",
+      "rule_id": "65f465f6-dccc-4ac8-82b8-51cced350db2",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 9,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value1",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 8,
+      "rule_name": "Auth_Rule_9",
+      "rule_id": "abf60264-6a48-44ab-a0ff-4f6163406052",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 10,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value1",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 9,
+      "rule_name": "Auth_Rule_10",
+      "rule_id": "b59b9217-7c22-4a9e-8f81-82c17ec84b4a",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 11,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value1",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 10,
+      "rule_name": "Auth_Rule_11",
+      "rule_id": "ff0e34ff-aba8-4087-a02a-1b37313b0b61",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 12,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value1",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 11,
+      "rule_name": "Auth_Rule_12",
+      "rule_id": "45270486-b18b-4486-a8ec-4bbddc6bf54e",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 13,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value1",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 12,
+      "rule_name": "Auth_Rule_13",
+      "rule_id": "86c64278-c26b-490a-8f0d-3ead6a8217ca",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 14,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value1",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 13,
+      "rule_name": "Auth_Rule_14",
+      "rule_id": "661c1e14-2782-4ba0-9269-4b19c6e12b24",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 15,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value1",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 14,
+      "rule_name": "Auth_Rule_15",
+      "rule_id": "5f59c444-8f2c-4468-9b2a-acd2b8766180",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 16,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value1",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 15,
+      "rule_name": "Auth_Rule_16",
+      "rule_id": "4a9f51b7-e1fe-41ea-956f-94d11f2aa17d",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 17,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value2",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 16,
+      "rule_name": "Auth_Rule_17",
+      "rule_id": "91d504df-e0a8-4e5d-ba6b-8c925ecfe649",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 18,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value2",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 17,
+      "rule_name": "Auth_Rule_18",
+      "rule_id": "a35d77d4-b66d-4ab3-be86-b5b30803d899",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 19,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value2",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 18,
+      "rule_name": "Auth_Rule_19",
+      "rule_id": "a7693782-adf4-4fc1-8623-a3b1e72ac0a1",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 20,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value2",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 19,
+      "rule_name": "Auth_Rule_20",
+      "rule_id": "25f36dd7-d7f1-4a1d-9871-44594dda3eff",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 21,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value2",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 20,
+      "rule_name": "Auth_Rule_21",
+      "rule_id": "799603a3-65a0-4bc4-ad8d-3b6b54743c80",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 22,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value2",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 21,
+      "rule_name": "Auth_Rule_22",
+      "rule_id": "8d67f95c-1ada-47b8-a997-b47d35e82740",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 23,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value2",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 22,
+      "rule_name": "Auth_Rule_23",
+      "rule_id": "c1583be1-a865-4720-ac37-45a92399fd82",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 24,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value2",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 23,
+      "rule_name": "Auth_Rule_24",
+      "rule_id": "8686cd90-4cd0-49c8-ab7e-c4ae9662a542",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 25,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value2",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 24,
+      "rule_name": "Auth_Rule_25",
+      "rule_id": "06af53e0-0c97-42e8-a20b-0b3a2d43de75",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 26,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value2",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 25,
+      "rule_name": "Auth_Rule_26",
+      "rule_id": "6193df2f-fcff-44eb-9f58-914747f71cb0",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 27,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value2",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 26,
+      "rule_name": "Auth_Rule_27",
+      "rule_id": "6b31340f-753c-4fc6-a9dd-efe878a8650b",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 28,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value2",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 27,
+      "rule_name": "Auth_Rule_28",
+      "rule_id": "52de313d-97ce-4a04-8a8b-93f48753b688",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 29,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value2",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 28,
+      "rule_name": "Auth_Rule_29",
+      "rule_id": "cd623778-8093-4394-9d8b-d58336bdcde0",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 30,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value2",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 29,
+      "rule_name": "Auth_Rule_30",
+      "rule_id": "89a0fb84-9407-48cb-86d3-943fc21a80e6",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 31,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value2",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 30,
+      "rule_name": "Auth_Rule_31",
+      "rule_id": "a68d3122-e922-4535-bcfa-e911f8e5a8d1",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 32,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value2",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 31,
+      "rule_name": "Auth_Rule_32",
+      "rule_id": "2c85cb3a-23ca-4343-a682-4a03faff16ee",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 33,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value3",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 32,
+      "rule_name": "Auth_Rule_33",
+      "rule_id": "13532011-2468-4112-868b-584535bd97f8",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 34,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value3",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 33,
+      "rule_name": "Auth_Rule_34",
+      "rule_id": "14ed85ce-63a1-4786-8f2f-496dc2b09544",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 35,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value3",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 34,
+      "rule_name": "Auth_Rule_35",
+      "rule_id": "9074dd2d-1edf-423d-84f1-619f24d4922a",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 36,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value3",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 35,
+      "rule_name": "Auth_Rule_36",
+      "rule_id": "890f1f08-f464-4c36-a65a-fd91aec16728",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 37,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value3",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 36,
+      "rule_name": "Auth_Rule_37",
+      "rule_id": "e9752c72-8a18-4534-98bc-1fad74139c70",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 38,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value3",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 37,
+      "rule_name": "Auth_Rule_38",
+      "rule_id": "65db7bb8-5e13-4556-a5ed-3db6e43917b0",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 39,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value3",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 38,
+      "rule_name": "Auth_Rule_39",
+      "rule_id": "bd094d77-fc49-4c13-a088-f4fcc8b80247",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 40,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value3",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 39,
+      "rule_name": "Auth_Rule_40",
+      "rule_id": "19167b19-dc77-4ad5-ae07-2b3169ca58a4",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 41,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value3",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 40,
+      "rule_name": "Auth_Rule_41",
+      "rule_id": "e5bb4cee-68b5-4a94-acda-8d2cb7049912",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 42,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value3",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 41,
+      "rule_name": "Auth_Rule_42",
+      "rule_id": "102472d5-48f4-44a6-8082-9c019f33cf07",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 43,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value3",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 42,
+      "rule_name": "Auth_Rule_43",
+      "rule_id": "39c7d09a-daaf-4a47-818f-dbca04679cf1",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 44,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value3",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 43,
+      "rule_name": "Auth_Rule_44",
+      "rule_id": "b4feaf57-172d-4d82-ac37-d0f279a07bed",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 45,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value3",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 44,
+      "rule_name": "Auth_Rule_45",
+      "rule_id": "5968fcf6-664c-49f0-8491-b4abef50ac0d",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 46,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value3",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 45,
+      "rule_name": "Auth_Rule_46",
+      "rule_id": "412d5e22-726f-49ff-9c5f-8f4cd2c3a11c",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 47,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value3",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 46,
+      "rule_name": "Auth_Rule_47",
+      "rule_id": "23cd45c4-afb9-4f31-bbbd-b05c1ff700f8",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 48,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value3",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 47,
+      "rule_name": "Auth_Rule_48",
+      "rule_id": "b7bccdc7-9d80-4991-a55f-0d117566530b",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 49,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value4",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 48,
+      "rule_name": "Auth_Rule_49",
+      "rule_id": "ff6522d3-9b62-4f89-9f10-cca4ce5e7bf7",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 50,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value4",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 49,
+      "rule_name": "Auth_Rule_50",
+      "rule_id": "3a6272cc-bc79-4dbe-9562-a85664ec0ef3",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 51,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value4",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 50,
+      "rule_name": "Auth_Rule_51",
+      "rule_id": "90067569-4104-45bf-a3f0-04901a356c92",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 52,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value4",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 51,
+      "rule_name": "Auth_Rule_52",
+      "rule_id": "3747899c-34b5-4cfb-b993-ddc86bc356d4",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 53,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value4",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 52,
+      "rule_name": "Auth_Rule_53",
+      "rule_id": "2995feae-2e06-49cb-a685-2bcc386c0a83",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 54,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value4",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 53,
+      "rule_name": "Auth_Rule_54",
+      "rule_id": "67eec6bb-6878-4fcc-9044-21c8d1fec63f",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 55,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value4",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 54,
+      "rule_name": "Auth_Rule_55",
+      "rule_id": "8dd4b109-294b-4ad8-a0a9-069313f1547b",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 56,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value4",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 55,
+      "rule_name": "Auth_Rule_56",
+      "rule_id": "b12859cf-f449-40b0-9c2b-f2d29a5ebe45",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 57,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value4",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 56,
+      "rule_name": "Auth_Rule_57",
+      "rule_id": "e7f235fd-3bc3-4b7f-9035-51c7cc6711e5",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 58,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value4",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 57,
+      "rule_name": "Auth_Rule_58",
+      "rule_id": "c7bb58f5-7660-44f7-930c-5f036a957d7a",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 59,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value4",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 58,
+      "rule_name": "Auth_Rule_59",
+      "rule_id": "ea2e4230-bf29-4d70-be64-cfcd669f9213",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 60,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value4",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 59,
+      "rule_name": "Auth_Rule_60",
+      "rule_id": "272fb6e5-490f-4fe6-8dd6-10d595238ff3",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 61,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value4",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 60,
+      "rule_name": "Auth_Rule_61",
+      "rule_id": "a5b843ff-2050-4ddd-afee-ef08a0eb2a7b",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 62,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value4",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 61,
+      "rule_name": "Auth_Rule_62",
+      "rule_id": "acd1203c-ca81-4752-aaa5-69616281554c",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 63,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value4",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 62,
+      "rule_name": "Auth_Rule_63",
+      "rule_id": "dd8ab2d9-a69a-4804-8007-1cf14b05760a",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 64,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value4",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 63,
+      "rule_name": "Auth_Rule_64",
+      "rule_id": "86af7da2-6359-4576-bad6-1995d75d267a",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 65,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 64,
+      "rule_name": "Auth_Rule_65",
+      "rule_id": "a23d7df6-e337-4990-906a-3e9b8e97c38d",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 66,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 65,
+      "rule_name": "Auth_Rule_66",
+      "rule_id": "c7d753f1-8a09-4872-9be2-20824eeafd19",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 67,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 66,
+      "rule_name": "Auth_Rule_67",
+      "rule_id": "642a94cb-c0be-48f5-8982-2aac51d8168d",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 68,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 67,
+      "rule_name": "Auth_Rule_68",
+      "rule_id": "b0ed92f1-a669-46c4-904a-a36e9e2bf718",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 69,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 68,
+      "rule_name": "Auth_Rule_69",
+      "rule_id": "b419a34c-2f39-406b-9a66-6ce174a04047",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 70,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 69,
+      "rule_name": "Auth_Rule_70",
+      "rule_id": "b9ff9b1e-f464-42af-bfca-a1ff0c25e156",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 71,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 70,
+      "rule_name": "Auth_Rule_71",
+      "rule_id": "554685ad-f784-4cd5-aed9-172db67cd3fa",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 72,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 71,
+      "rule_name": "Auth_Rule_72",
+      "rule_id": "ff62a618-0a04-4199-a60d-f6461315a717",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 73,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 72,
+      "rule_name": "Auth_Rule_73",
+      "rule_id": "696cbc4a-42f1-4e73-871d-d5c4f75e1c05",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 74,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 73,
+      "rule_name": "Auth_Rule_74",
+      "rule_id": "a15d56e8-01b1-44c2-80d9-43092f287a09",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 75,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 74,
+      "rule_name": "Auth_Rule_75",
+      "rule_id": "dd320afc-4708-45d8-9eaf-65a996677393",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 76,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 75,
+      "rule_name": "Auth_Rule_76",
+      "rule_id": "f8587697-120c-43fd-9cf0-9d76265eac12",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 77,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 76,
+      "rule_name": "Auth_Rule_77",
+      "rule_id": "58fd62aa-1985-4a92-b59f-2760cfdfa391",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 78,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 77,
+      "rule_name": "Auth_Rule_78",
+      "rule_id": "d8aa2009-d743-43f0-a173-97dd4b5f9812",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 79,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 78,
+      "rule_name": "Auth_Rule_79",
+      "rule_id": "b270e7d2-1316-447c-a749-3861fbda9448",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 80,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Not Specified",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 79,
+      "rule_name": "Auth_Rule_80",
+      "rule_id": "d64334e1-72a1-4399-88a0-82e72089aab4",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 81,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value1",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 80,
+      "rule_name": "Auth_Rule_81",
+      "rule_id": "3da5621a-fb04-42ae-a6f3-15e1572f0626",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 82,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value1",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 81,
+      "rule_name": "Auth_Rule_82",
+      "rule_id": "0011bc53-dc54-4dfc-809b-8e7cda607073",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 83,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value1",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 82,
+      "rule_name": "Auth_Rule_83",
+      "rule_id": "aa93d8e0-c9a5-42a6-a066-b08ea10a2b3d",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 84,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value1",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 83,
+      "rule_name": "Auth_Rule_84",
+      "rule_id": "1f30f2e6-5614-4a98-9c72-1b20a897c05b",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 85,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value2",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 84,
+      "rule_name": "Auth_Rule_85",
+      "rule_id": "f6469221-a1a7-4849-ae9b-a3ccdb05d9dd",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 86,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value2",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 85,
+      "rule_name": "Auth_Rule_86",
+      "rule_id": "2344a680-e29b-4bb0-a1e6-ccd6ac7ff499",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 87,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value2",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 86,
+      "rule_name": "Auth_Rule_87",
+      "rule_id": "51b516e4-733c-4f28-ba51-5e8934dfbd83",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 88,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value2",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 87,
+      "rule_name": "Auth_Rule_88",
+      "rule_id": "f4c1c0a8-622d-4c2c-8a21-2ae208ea0419",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 89,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value3",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 88,
+      "rule_name": "Auth_Rule_89",
+      "rule_id": "92f77d90-2d2a-4e82-b284-3264795160fe",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 90,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value3",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 89,
+      "rule_name": "Auth_Rule_90",
+      "rule_id": "f76b5027-6126-4779-a8f5-d6793c022c55",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 91,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value3",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 90,
+      "rule_name": "Auth_Rule_91",
+      "rule_id": "23ef7e7c-fb9a-4fa0-82bb-4ac2908b4ac2",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 92,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value3",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 91,
+      "rule_name": "Auth_Rule_92",
+      "rule_id": "854c92be-e2a0-40e5-bdec-33bf04bce07a",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 93,
+      "conditions": {
+        "rVLAN": "Value1",
+        "NetworkZone": "Value4",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 92,
+      "rule_name": "Auth_Rule_93",
+      "rule_id": "8edf2a50-1aa6-41bd-83c5-ec574e1aea90",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 94,
+      "conditions": {
+        "rVLAN": "Value2",
+        "NetworkZone": "Value4",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 93,
+      "rule_name": "Auth_Rule_94",
+      "rule_id": "2e4b8e40-5c2d-42d9-9ade-b35c55f345a8",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 95,
+      "conditions": {
+        "rVLAN": "Value3",
+        "NetworkZone": "Value4",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 94,
+      "rule_name": "Auth_Rule_95",
+      "rule_id": "644ec42a-fcb9-4e74-82a9-fa241f8f8758",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 96,
+      "conditions": {
+        "rVLAN": "Value4",
+        "NetworkZone": "Value4",
+        "Tenant": "Not Specified"
+      },
+      "rule_rank": 95,
+      "rule_name": "Auth_Rule_96",
+      "rule_id": "2db719bf-9b2a-40fc-80fe-22db1efd7aa8",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 97,
+      "conditions": {
+        "rVLAN": "Not Specified",
+        "NetworkZone": "Value1",
+        "Tenant": "Value1"
+      },
+      "rule_rank": 96,
+      "rule_name": "Auth_Rule_97",
+      "rule_id": "d7487826-53b9-40c7-95b5-9e281867e92f",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 98,
+      "conditions": {
+        "rVLAN": "Not Specified",
+        "NetworkZone": "Value1",
+        "Tenant": "Value2"
+      },
+      "rule_rank": 97,
+      "rule_name": "Auth_Rule_98",
+      "rule_id": "a9b9b9ee-753e-43e0-b356-2c99515ad0ca",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 99,
+      "conditions": {
+        "rVLAN": "Not Specified",
+        "NetworkZone": "Value1",
+        "Tenant": "Value3"
+      },
+      "rule_rank": 98,
+      "rule_name": "Auth_Rule_99",
+      "rule_id": "7c29fd6a-97d8-4492-afd0-6217022e438b",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    },
+    {
+      "path_id": 100,
+      "conditions": {
+        "rVLAN": "Not Specified",
+        "NetworkZone": "Value1",
+        "Tenant": "Value4"
+      },
+      "rule_rank": 99,
+      "rule_name": "Auth_Rule_100",
+      "rule_id": "50dcf3b5-5507-474a-a251-ef0f51af2a92",
+      "profile": "PermitAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled"
+    }
+  ],
+  "tree_structure": {
+    "Value1": {
+      "Value1": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 0,
+            "rule_name": "Auth_Rule_1",
+            "rule_id": "7864915f-500b-4bc5-aa47-38f79151c123",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 4,
+            "rule_name": "Auth_Rule_5",
+            "rule_id": "ff561336-f93a-4d39-a45c-31caf23ff674",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 8,
+            "rule_name": "Auth_Rule_9",
+            "rule_id": "abf60264-6a48-44ab-a0ff-4f6163406052",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 12,
+            "rule_name": "Auth_Rule_13",
+            "rule_id": "86c64278-c26b-490a-8f0d-3ead6a8217ca",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 80,
+            "rule_name": "Auth_Rule_81",
+            "rule_id": "3da5621a-fb04-42ae-a6f3-15e1572f0626",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value2": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 16,
+            "rule_name": "Auth_Rule_17",
+            "rule_id": "91d504df-e0a8-4e5d-ba6b-8c925ecfe649",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 20,
+            "rule_name": "Auth_Rule_21",
+            "rule_id": "799603a3-65a0-4bc4-ad8d-3b6b54743c80",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 24,
+            "rule_name": "Auth_Rule_25",
+            "rule_id": "06af53e0-0c97-42e8-a20b-0b3a2d43de75",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 28,
+            "rule_name": "Auth_Rule_29",
+            "rule_id": "cd623778-8093-4394-9d8b-d58336bdcde0",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 84,
+            "rule_name": "Auth_Rule_85",
+            "rule_id": "f6469221-a1a7-4849-ae9b-a3ccdb05d9dd",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value3": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 32,
+            "rule_name": "Auth_Rule_33",
+            "rule_id": "13532011-2468-4112-868b-584535bd97f8",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 36,
+            "rule_name": "Auth_Rule_37",
+            "rule_id": "e9752c72-8a18-4534-98bc-1fad74139c70",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 40,
+            "rule_name": "Auth_Rule_41",
+            "rule_id": "e5bb4cee-68b5-4a94-acda-8d2cb7049912",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 44,
+            "rule_name": "Auth_Rule_45",
+            "rule_id": "5968fcf6-664c-49f0-8491-b4abef50ac0d",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 88,
+            "rule_name": "Auth_Rule_89",
+            "rule_id": "92f77d90-2d2a-4e82-b284-3264795160fe",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value4": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 48,
+            "rule_name": "Auth_Rule_49",
+            "rule_id": "ff6522d3-9b62-4f89-9f10-cca4ce5e7bf7",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 52,
+            "rule_name": "Auth_Rule_53",
+            "rule_id": "2995feae-2e06-49cb-a685-2bcc386c0a83",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 56,
+            "rule_name": "Auth_Rule_57",
+            "rule_id": "e7f235fd-3bc3-4b7f-9035-51c7cc6711e5",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 60,
+            "rule_name": "Auth_Rule_61",
+            "rule_id": "a5b843ff-2050-4ddd-afee-ef08a0eb2a7b",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 92,
+            "rule_name": "Auth_Rule_93",
+            "rule_id": "8edf2a50-1aa6-41bd-83c5-ec574e1aea90",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Not Specified": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 64,
+            "rule_name": "Auth_Rule_65",
+            "rule_id": "a23d7df6-e337-4990-906a-3e9b8e97c38d",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 68,
+            "rule_name": "Auth_Rule_69",
+            "rule_id": "b419a34c-2f39-406b-9a66-6ce174a04047",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 72,
+            "rule_name": "Auth_Rule_73",
+            "rule_id": "696cbc4a-42f1-4e73-871d-d5c4f75e1c05",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 76,
+            "rule_name": "Auth_Rule_77",
+            "rule_id": "58fd62aa-1985-4a92-b59f-2760cfdfa391",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      }
+    },
+    "Value2": {
+      "Value1": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 1,
+            "rule_name": "Auth_Rule_2",
+            "rule_id": "22ab31e6-5a13-448d-b06a-8b03af3fb6b2",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 5,
+            "rule_name": "Auth_Rule_6",
+            "rule_id": "19d557e1-3114-403b-ab25-3953ca23606c",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 9,
+            "rule_name": "Auth_Rule_10",
+            "rule_id": "b59b9217-7c22-4a9e-8f81-82c17ec84b4a",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 13,
+            "rule_name": "Auth_Rule_14",
+            "rule_id": "661c1e14-2782-4ba0-9269-4b19c6e12b24",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 81,
+            "rule_name": "Auth_Rule_82",
+            "rule_id": "0011bc53-dc54-4dfc-809b-8e7cda607073",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value2": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 17,
+            "rule_name": "Auth_Rule_18",
+            "rule_id": "a35d77d4-b66d-4ab3-be86-b5b30803d899",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 21,
+            "rule_name": "Auth_Rule_22",
+            "rule_id": "8d67f95c-1ada-47b8-a997-b47d35e82740",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 25,
+            "rule_name": "Auth_Rule_26",
+            "rule_id": "6193df2f-fcff-44eb-9f58-914747f71cb0",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 29,
+            "rule_name": "Auth_Rule_30",
+            "rule_id": "89a0fb84-9407-48cb-86d3-943fc21a80e6",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 85,
+            "rule_name": "Auth_Rule_86",
+            "rule_id": "2344a680-e29b-4bb0-a1e6-ccd6ac7ff499",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value3": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 33,
+            "rule_name": "Auth_Rule_34",
+            "rule_id": "14ed85ce-63a1-4786-8f2f-496dc2b09544",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 37,
+            "rule_name": "Auth_Rule_38",
+            "rule_id": "65db7bb8-5e13-4556-a5ed-3db6e43917b0",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 41,
+            "rule_name": "Auth_Rule_42",
+            "rule_id": "102472d5-48f4-44a6-8082-9c019f33cf07",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 45,
+            "rule_name": "Auth_Rule_46",
+            "rule_id": "412d5e22-726f-49ff-9c5f-8f4cd2c3a11c",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 89,
+            "rule_name": "Auth_Rule_90",
+            "rule_id": "f76b5027-6126-4779-a8f5-d6793c022c55",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value4": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 49,
+            "rule_name": "Auth_Rule_50",
+            "rule_id": "3a6272cc-bc79-4dbe-9562-a85664ec0ef3",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 53,
+            "rule_name": "Auth_Rule_54",
+            "rule_id": "67eec6bb-6878-4fcc-9044-21c8d1fec63f",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 57,
+            "rule_name": "Auth_Rule_58",
+            "rule_id": "c7bb58f5-7660-44f7-930c-5f036a957d7a",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 61,
+            "rule_name": "Auth_Rule_62",
+            "rule_id": "acd1203c-ca81-4752-aaa5-69616281554c",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 93,
+            "rule_name": "Auth_Rule_94",
+            "rule_id": "2e4b8e40-5c2d-42d9-9ade-b35c55f345a8",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Not Specified": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 65,
+            "rule_name": "Auth_Rule_66",
+            "rule_id": "c7d753f1-8a09-4872-9be2-20824eeafd19",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 69,
+            "rule_name": "Auth_Rule_70",
+            "rule_id": "b9ff9b1e-f464-42af-bfca-a1ff0c25e156",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 73,
+            "rule_name": "Auth_Rule_74",
+            "rule_id": "a15d56e8-01b1-44c2-80d9-43092f287a09",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 77,
+            "rule_name": "Auth_Rule_78",
+            "rule_id": "d8aa2009-d743-43f0-a173-97dd4b5f9812",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      }
+    },
+    "Value3": {
+      "Value1": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 2,
+            "rule_name": "Auth_Rule_3",
+            "rule_id": "d6988702-a8e3-4f34-81a8-d90570d13a57",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 6,
+            "rule_name": "Auth_Rule_7",
+            "rule_id": "d8c93843-34ed-4331-b903-93dc9dd96be2",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 10,
+            "rule_name": "Auth_Rule_11",
+            "rule_id": "ff0e34ff-aba8-4087-a02a-1b37313b0b61",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 14,
+            "rule_name": "Auth_Rule_15",
+            "rule_id": "5f59c444-8f2c-4468-9b2a-acd2b8766180",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 82,
+            "rule_name": "Auth_Rule_83",
+            "rule_id": "aa93d8e0-c9a5-42a6-a066-b08ea10a2b3d",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value2": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 18,
+            "rule_name": "Auth_Rule_19",
+            "rule_id": "a7693782-adf4-4fc1-8623-a3b1e72ac0a1",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 22,
+            "rule_name": "Auth_Rule_23",
+            "rule_id": "c1583be1-a865-4720-ac37-45a92399fd82",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 26,
+            "rule_name": "Auth_Rule_27",
+            "rule_id": "6b31340f-753c-4fc6-a9dd-efe878a8650b",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 30,
+            "rule_name": "Auth_Rule_31",
+            "rule_id": "a68d3122-e922-4535-bcfa-e911f8e5a8d1",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 86,
+            "rule_name": "Auth_Rule_87",
+            "rule_id": "51b516e4-733c-4f28-ba51-5e8934dfbd83",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value3": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 34,
+            "rule_name": "Auth_Rule_35",
+            "rule_id": "9074dd2d-1edf-423d-84f1-619f24d4922a",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 38,
+            "rule_name": "Auth_Rule_39",
+            "rule_id": "bd094d77-fc49-4c13-a088-f4fcc8b80247",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 42,
+            "rule_name": "Auth_Rule_43",
+            "rule_id": "39c7d09a-daaf-4a47-818f-dbca04679cf1",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 46,
+            "rule_name": "Auth_Rule_47",
+            "rule_id": "23cd45c4-afb9-4f31-bbbd-b05c1ff700f8",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 90,
+            "rule_name": "Auth_Rule_91",
+            "rule_id": "23ef7e7c-fb9a-4fa0-82bb-4ac2908b4ac2",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value4": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 50,
+            "rule_name": "Auth_Rule_51",
+            "rule_id": "90067569-4104-45bf-a3f0-04901a356c92",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 54,
+            "rule_name": "Auth_Rule_55",
+            "rule_id": "8dd4b109-294b-4ad8-a0a9-069313f1547b",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 58,
+            "rule_name": "Auth_Rule_59",
+            "rule_id": "ea2e4230-bf29-4d70-be64-cfcd669f9213",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 62,
+            "rule_name": "Auth_Rule_63",
+            "rule_id": "dd8ab2d9-a69a-4804-8007-1cf14b05760a",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 94,
+            "rule_name": "Auth_Rule_95",
+            "rule_id": "644ec42a-fcb9-4e74-82a9-fa241f8f8758",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Not Specified": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 66,
+            "rule_name": "Auth_Rule_67",
+            "rule_id": "642a94cb-c0be-48f5-8982-2aac51d8168d",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 70,
+            "rule_name": "Auth_Rule_71",
+            "rule_id": "554685ad-f784-4cd5-aed9-172db67cd3fa",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 74,
+            "rule_name": "Auth_Rule_75",
+            "rule_id": "dd320afc-4708-45d8-9eaf-65a996677393",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 78,
+            "rule_name": "Auth_Rule_79",
+            "rule_id": "b270e7d2-1316-447c-a749-3861fbda9448",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      }
+    },
+    "Value4": {
+      "Value1": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 3,
+            "rule_name": "Auth_Rule_4",
+            "rule_id": "b535de8e-622e-41b2-aa40-1f53508ac03b",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 7,
+            "rule_name": "Auth_Rule_8",
+            "rule_id": "65f465f6-dccc-4ac8-82b8-51cced350db2",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 11,
+            "rule_name": "Auth_Rule_12",
+            "rule_id": "45270486-b18b-4486-a8ec-4bbddc6bf54e",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 15,
+            "rule_name": "Auth_Rule_16",
+            "rule_id": "4a9f51b7-e1fe-41ea-956f-94d11f2aa17d",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 83,
+            "rule_name": "Auth_Rule_84",
+            "rule_id": "1f30f2e6-5614-4a98-9c72-1b20a897c05b",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value2": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 19,
+            "rule_name": "Auth_Rule_20",
+            "rule_id": "25f36dd7-d7f1-4a1d-9871-44594dda3eff",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 23,
+            "rule_name": "Auth_Rule_24",
+            "rule_id": "8686cd90-4cd0-49c8-ab7e-c4ae9662a542",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 27,
+            "rule_name": "Auth_Rule_28",
+            "rule_id": "52de313d-97ce-4a04-8a8b-93f48753b688",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 31,
+            "rule_name": "Auth_Rule_32",
+            "rule_id": "2c85cb3a-23ca-4343-a682-4a03faff16ee",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 87,
+            "rule_name": "Auth_Rule_88",
+            "rule_id": "f4c1c0a8-622d-4c2c-8a21-2ae208ea0419",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value3": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 35,
+            "rule_name": "Auth_Rule_36",
+            "rule_id": "890f1f08-f464-4c36-a65a-fd91aec16728",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 39,
+            "rule_name": "Auth_Rule_40",
+            "rule_id": "19167b19-dc77-4ad5-ae07-2b3169ca58a4",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 43,
+            "rule_name": "Auth_Rule_44",
+            "rule_id": "b4feaf57-172d-4d82-ac37-d0f279a07bed",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 47,
+            "rule_name": "Auth_Rule_48",
+            "rule_id": "b7bccdc7-9d80-4991-a55f-0d117566530b",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 91,
+            "rule_name": "Auth_Rule_92",
+            "rule_id": "854c92be-e2a0-40e5-bdec-33bf04bce07a",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Value4": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 51,
+            "rule_name": "Auth_Rule_52",
+            "rule_id": "3747899c-34b5-4cfb-b993-ddc86bc356d4",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 55,
+            "rule_name": "Auth_Rule_56",
+            "rule_id": "b12859cf-f449-40b0-9c2b-f2d29a5ebe45",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 59,
+            "rule_name": "Auth_Rule_60",
+            "rule_id": "272fb6e5-490f-4fe6-8dd6-10d595238ff3",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 63,
+            "rule_name": "Auth_Rule_64",
+            "rule_id": "86af7da2-6359-4576-bad6-1995d75d267a",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Not Specified": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 95,
+            "rule_name": "Auth_Rule_96",
+            "rule_id": "2db719bf-9b2a-40fc-80fe-22db1efd7aa8",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      },
+      "Not Specified": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 67,
+            "rule_name": "Auth_Rule_68",
+            "rule_id": "b0ed92f1-a669-46c4-904a-a36e9e2bf718",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 71,
+            "rule_name": "Auth_Rule_72",
+            "rule_id": "ff62a618-0a04-4199-a60d-f6461315a717",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 75,
+            "rule_name": "Auth_Rule_76",
+            "rule_id": "f8587697-120c-43fd-9cf0-9d76265eac12",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 79,
+            "rule_name": "Auth_Rule_80",
+            "rule_id": "d64334e1-72a1-4399-88a0-82e72089aab4",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      }
+    },
+    "Not Specified": {
+      "Value1": {
+        "Value1": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 96,
+            "rule_name": "Auth_Rule_97",
+            "rule_id": "d7487826-53b9-40c7-95b5-9e281867e92f",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value2": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 97,
+            "rule_name": "Auth_Rule_98",
+            "rule_id": "a9b9b9ee-753e-43e0-b356-2c99515ad0ca",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value3": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 98,
+            "rule_name": "Auth_Rule_99",
+            "rule_id": "7c29fd6a-97d8-4492-afd0-6217022e438b",
+            "policy_set": "PolicySet1"
+          }
+        ],
+        "Value4": [
+          {
+            "result": "PermitAccess",
+            "rule_rank": 99,
+            "rule_name": "Auth_Rule_100",
+            "rule_id": "50dcf3b5-5507-474a-a251-ef0f51af2a92",
+            "policy_set": "PolicySet1"
+          }
+        ]
+      }
+    }
+  },
+  "other_rules": [
+    {
+      "rank": 0,
+      "name": "Default",
+      "profile": "DenyAccess",
+      "policy_set": "PolicySet2",
+      "state": "enabled",
+      "conditions": "No conditions"
+    },
+    {
+      "rank": 0,
+      "name": "Wireless Block List Default",
+      "profile": "Block_Wireless_Access",
+      "policy_set": "Default",
+      "state": "enabled",
+      "conditions": "Radius.NAS-Port-Type equals Wireless - IEEE 802.11 AND IdentityGroup.Name equals Endpoint Identity Groups:Blocked List"
+    },
+    {
+      "rank": 1,
+      "name": "Profiled Cisco IP Phones",
+      "profile": "Cisco_IP_Phones",
+      "policy_set": "Default",
+      "state": "enabled",
+      "conditions": "IdentityGroup.Name equals Endpoint Identity Groups:Profiled:Cisco-IP-Phone"
+    },
+    {
+      "rank": 2,
+      "name": "Profiled Non Cisco IP Phones",
+      "profile": "Non_Cisco_IP_Phones",
+      "policy_set": "Default",
+      "state": "enabled",
+      "conditions": "Complex condition"
+    },
+    {
+      "rank": 3,
+      "name": "Unknown_Compliance_Redirect",
+      "profile": "Cisco_Temporal_Onboard",
+      "policy_set": "Default",
+      "state": "disabled",
+      "conditions": "Network Access.AuthenticationStatus equals AuthenticationPassed AND Session.PostureStatus equals Unknown"
+    },
+    {
+      "rank": 4,
+      "name": "NonCompliant_Devices_Redirect",
+      "profile": "Cisco_Temporal_Onboard",
+      "policy_set": "Default",
+      "state": "disabled",
+      "conditions": "Network Access.AuthenticationStatus equals AuthenticationPassed AND Session.PostureStatus equals NonCompliant"
+    },
+    {
+      "rank": 5,
+      "name": "Compliant_Devices_Access",
+      "profile": "PermitAccess",
+      "policy_set": "Default",
+      "state": "disabled",
+      "conditions": "Network Access.AuthenticationStatus equals AuthenticationPassed AND Session.PostureStatus equals Compliant"
+    },
+    {
+      "rank": 6,
+      "name": "Employee_EAP-TLS",
+      "profile": "PermitAccess",
+      "policy_set": "Default",
+      "state": "disabled",
+      "conditions": "Normalised Radius.RadiusFlowType equals Wireless802_1x AND EndPoints.BYODRegistration equals Yes AND Network Access.EapAuthentication equals EAP-TLS AND CERTIFICATE.Subject Alternative Name equals Calling-Station-ID"
+    },
+    {
+      "rank": 7,
+      "name": "Employee_Onboarding",
+      "profile": "NSP_Onboard",
+      "policy_set": "Default",
+      "state": "disabled",
+      "conditions": "Normalised Radius.RadiusFlowType equals Wireless802_1x AND Network Access.EapAuthentication equals EAP-MSCHAPv2"
+    },
+    {
+      "rank": 8,
+      "name": "Wi-Fi_Guest_Access",
+      "profile": "PermitAccess",
+      "policy_set": "Default",
+      "state": "disabled",
+      "conditions": "Network Access.UseCase equals Guest Flow AND Normalised Radius.RadiusFlowType equals WirelessMAB"
+    },
+    {
+      "rank": 9,
+      "name": "Wi-Fi_Redirect_to_Guest_Login",
+      "profile": "Cisco_WebAuth",
+      "policy_set": "Default",
+      "state": "disabled",
+      "conditions": "Complex condition"
+    },
+    {
+      "rank": 10,
+      "name": "Basic_Authenticated_Access",
+      "profile": "PermitAccess",
+      "policy_set": "Default",
+      "state": "enabled",
+      "conditions": "Complex condition"
+    },
+    {
+      "rank": 11,
+      "name": "Default",
+      "profile": "DenyAccess",
+      "policy_set": "Default",
+      "state": "enabled",
+      "conditions": "No conditions"
+    },
+    {
+      "rank": 100,
+      "name": "Default",
+      "profile": "DenyAccess",
+      "policy_set": "PolicySet1",
+      "state": "enabled",
+      "conditions": "No conditions"
+    }
+  ]
+}

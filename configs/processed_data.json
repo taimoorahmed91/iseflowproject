@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "generated_at": "2026-01-31T21:58:45.737588Z",
+    "generated_at": "2026-02-01T11:43:51.989778Z",
     "total_policy_sets": 3,
     "total_authentication_policies": 5,
-    "total_authorization_policies": 14
+    "total_authorization_policies": 114
   },
   "policy_sets": [
     {
@@ -133,11 +133,5251 @@
       "authorization_policies": [
         {
           "rule": {
+            "default": false,
+            "id": "7864915f-500b-4bc5-aa47-38f79151c123",
+            "name": "Auth_Rule_1",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/7864915f-500b-4bc5-aa47-38f79151c123",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "22ab31e6-5a13-448d-b06a-8b03af3fb6b2",
+            "name": "Auth_Rule_2",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/22ab31e6-5a13-448d-b06a-8b03af3fb6b2",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "d6988702-a8e3-4f34-81a8-d90570d13a57",
+            "name": "Auth_Rule_3",
+            "hitCounts": 0,
+            "rank": 2,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/d6988702-a8e3-4f34-81a8-d90570d13a57",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "b535de8e-622e-41b2-aa40-1f53508ac03b",
+            "name": "Auth_Rule_4",
+            "hitCounts": 0,
+            "rank": 3,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/b535de8e-622e-41b2-aa40-1f53508ac03b",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "ff561336-f93a-4d39-a45c-31caf23ff674",
+            "name": "Auth_Rule_5",
+            "hitCounts": 0,
+            "rank": 4,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/ff561336-f93a-4d39-a45c-31caf23ff674",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "19d557e1-3114-403b-ab25-3953ca23606c",
+            "name": "Auth_Rule_6",
+            "hitCounts": 0,
+            "rank": 5,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/19d557e1-3114-403b-ab25-3953ca23606c",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "d8c93843-34ed-4331-b903-93dc9dd96be2",
+            "name": "Auth_Rule_7",
+            "hitCounts": 0,
+            "rank": 6,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/d8c93843-34ed-4331-b903-93dc9dd96be2",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "65f465f6-dccc-4ac8-82b8-51cced350db2",
+            "name": "Auth_Rule_8",
+            "hitCounts": 0,
+            "rank": 7,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/65f465f6-dccc-4ac8-82b8-51cced350db2",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "abf60264-6a48-44ab-a0ff-4f6163406052",
+            "name": "Auth_Rule_9",
+            "hitCounts": 0,
+            "rank": 8,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/abf60264-6a48-44ab-a0ff-4f6163406052",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "b59b9217-7c22-4a9e-8f81-82c17ec84b4a",
+            "name": "Auth_Rule_10",
+            "hitCounts": 0,
+            "rank": 9,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/b59b9217-7c22-4a9e-8f81-82c17ec84b4a",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "ff0e34ff-aba8-4087-a02a-1b37313b0b61",
+            "name": "Auth_Rule_11",
+            "hitCounts": 0,
+            "rank": 10,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/ff0e34ff-aba8-4087-a02a-1b37313b0b61",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "45270486-b18b-4486-a8ec-4bbddc6bf54e",
+            "name": "Auth_Rule_12",
+            "hitCounts": 0,
+            "rank": 11,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/45270486-b18b-4486-a8ec-4bbddc6bf54e",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "86c64278-c26b-490a-8f0d-3ead6a8217ca",
+            "name": "Auth_Rule_13",
+            "hitCounts": 0,
+            "rank": 12,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/86c64278-c26b-490a-8f0d-3ead6a8217ca",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "661c1e14-2782-4ba0-9269-4b19c6e12b24",
+            "name": "Auth_Rule_14",
+            "hitCounts": 0,
+            "rank": 13,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/661c1e14-2782-4ba0-9269-4b19c6e12b24",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "5f59c444-8f2c-4468-9b2a-acd2b8766180",
+            "name": "Auth_Rule_15",
+            "hitCounts": 0,
+            "rank": 14,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/5f59c444-8f2c-4468-9b2a-acd2b8766180",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "4a9f51b7-e1fe-41ea-956f-94d11f2aa17d",
+            "name": "Auth_Rule_16",
+            "hitCounts": 0,
+            "rank": 15,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/4a9f51b7-e1fe-41ea-956f-94d11f2aa17d",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "91d504df-e0a8-4e5d-ba6b-8c925ecfe649",
+            "name": "Auth_Rule_17",
+            "hitCounts": 0,
+            "rank": 16,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/91d504df-e0a8-4e5d-ba6b-8c925ecfe649",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "a35d77d4-b66d-4ab3-be86-b5b30803d899",
+            "name": "Auth_Rule_18",
+            "hitCounts": 0,
+            "rank": 17,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/a35d77d4-b66d-4ab3-be86-b5b30803d899",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "a7693782-adf4-4fc1-8623-a3b1e72ac0a1",
+            "name": "Auth_Rule_19",
+            "hitCounts": 0,
+            "rank": 18,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/a7693782-adf4-4fc1-8623-a3b1e72ac0a1",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "25f36dd7-d7f1-4a1d-9871-44594dda3eff",
+            "name": "Auth_Rule_20",
+            "hitCounts": 0,
+            "rank": 19,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/25f36dd7-d7f1-4a1d-9871-44594dda3eff",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "799603a3-65a0-4bc4-ad8d-3b6b54743c80",
+            "name": "Auth_Rule_21",
+            "hitCounts": 0,
+            "rank": 20,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/799603a3-65a0-4bc4-ad8d-3b6b54743c80",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "8d67f95c-1ada-47b8-a997-b47d35e82740",
+            "name": "Auth_Rule_22",
+            "hitCounts": 0,
+            "rank": 21,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/8d67f95c-1ada-47b8-a997-b47d35e82740",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "c1583be1-a865-4720-ac37-45a92399fd82",
+            "name": "Auth_Rule_23",
+            "hitCounts": 0,
+            "rank": 22,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/c1583be1-a865-4720-ac37-45a92399fd82",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "8686cd90-4cd0-49c8-ab7e-c4ae9662a542",
+            "name": "Auth_Rule_24",
+            "hitCounts": 0,
+            "rank": 23,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/8686cd90-4cd0-49c8-ab7e-c4ae9662a542",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "06af53e0-0c97-42e8-a20b-0b3a2d43de75",
+            "name": "Auth_Rule_25",
+            "hitCounts": 0,
+            "rank": 24,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/06af53e0-0c97-42e8-a20b-0b3a2d43de75",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "6193df2f-fcff-44eb-9f58-914747f71cb0",
+            "name": "Auth_Rule_26",
+            "hitCounts": 0,
+            "rank": 25,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/6193df2f-fcff-44eb-9f58-914747f71cb0",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "6b31340f-753c-4fc6-a9dd-efe878a8650b",
+            "name": "Auth_Rule_27",
+            "hitCounts": 0,
+            "rank": 26,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/6b31340f-753c-4fc6-a9dd-efe878a8650b",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "52de313d-97ce-4a04-8a8b-93f48753b688",
+            "name": "Auth_Rule_28",
+            "hitCounts": 0,
+            "rank": 27,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/52de313d-97ce-4a04-8a8b-93f48753b688",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "cd623778-8093-4394-9d8b-d58336bdcde0",
+            "name": "Auth_Rule_29",
+            "hitCounts": 0,
+            "rank": 28,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/cd623778-8093-4394-9d8b-d58336bdcde0",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "89a0fb84-9407-48cb-86d3-943fc21a80e6",
+            "name": "Auth_Rule_30",
+            "hitCounts": 0,
+            "rank": 29,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/89a0fb84-9407-48cb-86d3-943fc21a80e6",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "a68d3122-e922-4535-bcfa-e911f8e5a8d1",
+            "name": "Auth_Rule_31",
+            "hitCounts": 0,
+            "rank": 30,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/a68d3122-e922-4535-bcfa-e911f8e5a8d1",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "2c85cb3a-23ca-4343-a682-4a03faff16ee",
+            "name": "Auth_Rule_32",
+            "hitCounts": 0,
+            "rank": 31,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/2c85cb3a-23ca-4343-a682-4a03faff16ee",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "13532011-2468-4112-868b-584535bd97f8",
+            "name": "Auth_Rule_33",
+            "hitCounts": 0,
+            "rank": 32,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/13532011-2468-4112-868b-584535bd97f8",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "14ed85ce-63a1-4786-8f2f-496dc2b09544",
+            "name": "Auth_Rule_34",
+            "hitCounts": 0,
+            "rank": 33,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/14ed85ce-63a1-4786-8f2f-496dc2b09544",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "9074dd2d-1edf-423d-84f1-619f24d4922a",
+            "name": "Auth_Rule_35",
+            "hitCounts": 0,
+            "rank": 34,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/9074dd2d-1edf-423d-84f1-619f24d4922a",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "890f1f08-f464-4c36-a65a-fd91aec16728",
+            "name": "Auth_Rule_36",
+            "hitCounts": 0,
+            "rank": 35,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/890f1f08-f464-4c36-a65a-fd91aec16728",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "e9752c72-8a18-4534-98bc-1fad74139c70",
+            "name": "Auth_Rule_37",
+            "hitCounts": 0,
+            "rank": 36,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/e9752c72-8a18-4534-98bc-1fad74139c70",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "65db7bb8-5e13-4556-a5ed-3db6e43917b0",
+            "name": "Auth_Rule_38",
+            "hitCounts": 0,
+            "rank": 37,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/65db7bb8-5e13-4556-a5ed-3db6e43917b0",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "bd094d77-fc49-4c13-a088-f4fcc8b80247",
+            "name": "Auth_Rule_39",
+            "hitCounts": 0,
+            "rank": 38,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/bd094d77-fc49-4c13-a088-f4fcc8b80247",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "19167b19-dc77-4ad5-ae07-2b3169ca58a4",
+            "name": "Auth_Rule_40",
+            "hitCounts": 0,
+            "rank": 39,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/19167b19-dc77-4ad5-ae07-2b3169ca58a4",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "e5bb4cee-68b5-4a94-acda-8d2cb7049912",
+            "name": "Auth_Rule_41",
+            "hitCounts": 0,
+            "rank": 40,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/e5bb4cee-68b5-4a94-acda-8d2cb7049912",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "102472d5-48f4-44a6-8082-9c019f33cf07",
+            "name": "Auth_Rule_42",
+            "hitCounts": 0,
+            "rank": 41,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/102472d5-48f4-44a6-8082-9c019f33cf07",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "39c7d09a-daaf-4a47-818f-dbca04679cf1",
+            "name": "Auth_Rule_43",
+            "hitCounts": 0,
+            "rank": 42,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/39c7d09a-daaf-4a47-818f-dbca04679cf1",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "b4feaf57-172d-4d82-ac37-d0f279a07bed",
+            "name": "Auth_Rule_44",
+            "hitCounts": 0,
+            "rank": 43,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/b4feaf57-172d-4d82-ac37-d0f279a07bed",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "5968fcf6-664c-49f0-8491-b4abef50ac0d",
+            "name": "Auth_Rule_45",
+            "hitCounts": 0,
+            "rank": 44,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/5968fcf6-664c-49f0-8491-b4abef50ac0d",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "412d5e22-726f-49ff-9c5f-8f4cd2c3a11c",
+            "name": "Auth_Rule_46",
+            "hitCounts": 0,
+            "rank": 45,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/412d5e22-726f-49ff-9c5f-8f4cd2c3a11c",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "23cd45c4-afb9-4f31-bbbd-b05c1ff700f8",
+            "name": "Auth_Rule_47",
+            "hitCounts": 0,
+            "rank": 46,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/23cd45c4-afb9-4f31-bbbd-b05c1ff700f8",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "b7bccdc7-9d80-4991-a55f-0d117566530b",
+            "name": "Auth_Rule_48",
+            "hitCounts": 0,
+            "rank": 47,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/b7bccdc7-9d80-4991-a55f-0d117566530b",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "ff6522d3-9b62-4f89-9f10-cca4ce5e7bf7",
+            "name": "Auth_Rule_49",
+            "hitCounts": 0,
+            "rank": 48,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/ff6522d3-9b62-4f89-9f10-cca4ce5e7bf7",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "3a6272cc-bc79-4dbe-9562-a85664ec0ef3",
+            "name": "Auth_Rule_50",
+            "hitCounts": 0,
+            "rank": 49,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/3a6272cc-bc79-4dbe-9562-a85664ec0ef3",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "90067569-4104-45bf-a3f0-04901a356c92",
+            "name": "Auth_Rule_51",
+            "hitCounts": 0,
+            "rank": 50,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/90067569-4104-45bf-a3f0-04901a356c92",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "3747899c-34b5-4cfb-b993-ddc86bc356d4",
+            "name": "Auth_Rule_52",
+            "hitCounts": 0,
+            "rank": 51,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/3747899c-34b5-4cfb-b993-ddc86bc356d4",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "2995feae-2e06-49cb-a685-2bcc386c0a83",
+            "name": "Auth_Rule_53",
+            "hitCounts": 0,
+            "rank": 52,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/2995feae-2e06-49cb-a685-2bcc386c0a83",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "67eec6bb-6878-4fcc-9044-21c8d1fec63f",
+            "name": "Auth_Rule_54",
+            "hitCounts": 0,
+            "rank": 53,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/67eec6bb-6878-4fcc-9044-21c8d1fec63f",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "8dd4b109-294b-4ad8-a0a9-069313f1547b",
+            "name": "Auth_Rule_55",
+            "hitCounts": 0,
+            "rank": 54,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/8dd4b109-294b-4ad8-a0a9-069313f1547b",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "b12859cf-f449-40b0-9c2b-f2d29a5ebe45",
+            "name": "Auth_Rule_56",
+            "hitCounts": 0,
+            "rank": 55,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/b12859cf-f449-40b0-9c2b-f2d29a5ebe45",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "e7f235fd-3bc3-4b7f-9035-51c7cc6711e5",
+            "name": "Auth_Rule_57",
+            "hitCounts": 0,
+            "rank": 56,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/e7f235fd-3bc3-4b7f-9035-51c7cc6711e5",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "c7bb58f5-7660-44f7-930c-5f036a957d7a",
+            "name": "Auth_Rule_58",
+            "hitCounts": 0,
+            "rank": 57,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/c7bb58f5-7660-44f7-930c-5f036a957d7a",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "ea2e4230-bf29-4d70-be64-cfcd669f9213",
+            "name": "Auth_Rule_59",
+            "hitCounts": 0,
+            "rank": 58,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/ea2e4230-bf29-4d70-be64-cfcd669f9213",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "272fb6e5-490f-4fe6-8dd6-10d595238ff3",
+            "name": "Auth_Rule_60",
+            "hitCounts": 0,
+            "rank": 59,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/272fb6e5-490f-4fe6-8dd6-10d595238ff3",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "a5b843ff-2050-4ddd-afee-ef08a0eb2a7b",
+            "name": "Auth_Rule_61",
+            "hitCounts": 0,
+            "rank": 60,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/a5b843ff-2050-4ddd-afee-ef08a0eb2a7b",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "acd1203c-ca81-4752-aaa5-69616281554c",
+            "name": "Auth_Rule_62",
+            "hitCounts": 0,
+            "rank": 61,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/acd1203c-ca81-4752-aaa5-69616281554c",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "dd8ab2d9-a69a-4804-8007-1cf14b05760a",
+            "name": "Auth_Rule_63",
+            "hitCounts": 0,
+            "rank": 62,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/dd8ab2d9-a69a-4804-8007-1cf14b05760a",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "86af7da2-6359-4576-bad6-1995d75d267a",
+            "name": "Auth_Rule_64",
+            "hitCounts": 0,
+            "rank": 63,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/86af7da2-6359-4576-bad6-1995d75d267a",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "a23d7df6-e337-4990-906a-3e9b8e97c38d",
+            "name": "Auth_Rule_65",
+            "hitCounts": 0,
+            "rank": 64,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/a23d7df6-e337-4990-906a-3e9b8e97c38d",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "c7d753f1-8a09-4872-9be2-20824eeafd19",
+            "name": "Auth_Rule_66",
+            "hitCounts": 0,
+            "rank": 65,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/c7d753f1-8a09-4872-9be2-20824eeafd19",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "642a94cb-c0be-48f5-8982-2aac51d8168d",
+            "name": "Auth_Rule_67",
+            "hitCounts": 0,
+            "rank": 66,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/642a94cb-c0be-48f5-8982-2aac51d8168d",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "b0ed92f1-a669-46c4-904a-a36e9e2bf718",
+            "name": "Auth_Rule_68",
+            "hitCounts": 0,
+            "rank": 67,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/b0ed92f1-a669-46c4-904a-a36e9e2bf718",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "b419a34c-2f39-406b-9a66-6ce174a04047",
+            "name": "Auth_Rule_69",
+            "hitCounts": 0,
+            "rank": 68,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/b419a34c-2f39-406b-9a66-6ce174a04047",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "b9ff9b1e-f464-42af-bfca-a1ff0c25e156",
+            "name": "Auth_Rule_70",
+            "hitCounts": 0,
+            "rank": 69,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/b9ff9b1e-f464-42af-bfca-a1ff0c25e156",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "554685ad-f784-4cd5-aed9-172db67cd3fa",
+            "name": "Auth_Rule_71",
+            "hitCounts": 0,
+            "rank": 70,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/554685ad-f784-4cd5-aed9-172db67cd3fa",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "ff62a618-0a04-4199-a60d-f6461315a717",
+            "name": "Auth_Rule_72",
+            "hitCounts": 0,
+            "rank": 71,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/ff62a618-0a04-4199-a60d-f6461315a717",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "696cbc4a-42f1-4e73-871d-d5c4f75e1c05",
+            "name": "Auth_Rule_73",
+            "hitCounts": 0,
+            "rank": 72,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/696cbc4a-42f1-4e73-871d-d5c4f75e1c05",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "a15d56e8-01b1-44c2-80d9-43092f287a09",
+            "name": "Auth_Rule_74",
+            "hitCounts": 0,
+            "rank": 73,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/a15d56e8-01b1-44c2-80d9-43092f287a09",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "dd320afc-4708-45d8-9eaf-65a996677393",
+            "name": "Auth_Rule_75",
+            "hitCounts": 0,
+            "rank": 74,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/dd320afc-4708-45d8-9eaf-65a996677393",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "f8587697-120c-43fd-9cf0-9d76265eac12",
+            "name": "Auth_Rule_76",
+            "hitCounts": 0,
+            "rank": 75,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/f8587697-120c-43fd-9cf0-9d76265eac12",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "58fd62aa-1985-4a92-b59f-2760cfdfa391",
+            "name": "Auth_Rule_77",
+            "hitCounts": 0,
+            "rank": 76,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/58fd62aa-1985-4a92-b59f-2760cfdfa391",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "d8aa2009-d743-43f0-a173-97dd4b5f9812",
+            "name": "Auth_Rule_78",
+            "hitCounts": 0,
+            "rank": 77,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/d8aa2009-d743-43f0-a173-97dd4b5f9812",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "b270e7d2-1316-447c-a749-3861fbda9448",
+            "name": "Auth_Rule_79",
+            "hitCounts": 0,
+            "rank": 78,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/b270e7d2-1316-447c-a749-3861fbda9448",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "d64334e1-72a1-4399-88a0-82e72089aab4",
+            "name": "Auth_Rule_80",
+            "hitCounts": 0,
+            "rank": 79,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/d64334e1-72a1-4399-88a0-82e72089aab4",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "3da5621a-fb04-42ae-a6f3-15e1572f0626",
+            "name": "Auth_Rule_81",
+            "hitCounts": 0,
+            "rank": 80,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/3da5621a-fb04-42ae-a6f3-15e1572f0626",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "0011bc53-dc54-4dfc-809b-8e7cda607073",
+            "name": "Auth_Rule_82",
+            "hitCounts": 0,
+            "rank": 81,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/0011bc53-dc54-4dfc-809b-8e7cda607073",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "aa93d8e0-c9a5-42a6-a066-b08ea10a2b3d",
+            "name": "Auth_Rule_83",
+            "hitCounts": 0,
+            "rank": 82,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/aa93d8e0-c9a5-42a6-a066-b08ea10a2b3d",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "1f30f2e6-5614-4a98-9c72-1b20a897c05b",
+            "name": "Auth_Rule_84",
+            "hitCounts": 0,
+            "rank": 83,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/1f30f2e6-5614-4a98-9c72-1b20a897c05b",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "f6469221-a1a7-4849-ae9b-a3ccdb05d9dd",
+            "name": "Auth_Rule_85",
+            "hitCounts": 0,
+            "rank": 84,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/f6469221-a1a7-4849-ae9b-a3ccdb05d9dd",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "2344a680-e29b-4bb0-a1e6-ccd6ac7ff499",
+            "name": "Auth_Rule_86",
+            "hitCounts": 0,
+            "rank": 85,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/2344a680-e29b-4bb0-a1e6-ccd6ac7ff499",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "51b516e4-733c-4f28-ba51-5e8934dfbd83",
+            "name": "Auth_Rule_87",
+            "hitCounts": 0,
+            "rank": 86,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/51b516e4-733c-4f28-ba51-5e8934dfbd83",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "f4c1c0a8-622d-4c2c-8a21-2ae208ea0419",
+            "name": "Auth_Rule_88",
+            "hitCounts": 0,
+            "rank": 87,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/f4c1c0a8-622d-4c2c-8a21-2ae208ea0419",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "92f77d90-2d2a-4e82-b284-3264795160fe",
+            "name": "Auth_Rule_89",
+            "hitCounts": 0,
+            "rank": 88,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/92f77d90-2d2a-4e82-b284-3264795160fe",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "f76b5027-6126-4779-a8f5-d6793c022c55",
+            "name": "Auth_Rule_90",
+            "hitCounts": 0,
+            "rank": 89,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/f76b5027-6126-4779-a8f5-d6793c022c55",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "23ef7e7c-fb9a-4fa0-82bb-4ac2908b4ac2",
+            "name": "Auth_Rule_91",
+            "hitCounts": 0,
+            "rank": 90,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/23ef7e7c-fb9a-4fa0-82bb-4ac2908b4ac2",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "854c92be-e2a0-40e5-bdec-33bf04bce07a",
+            "name": "Auth_Rule_92",
+            "hitCounts": 0,
+            "rank": 91,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/854c92be-e2a0-40e5-bdec-33bf04bce07a",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "8edf2a50-1aa6-41bd-83c5-ec574e1aea90",
+            "name": "Auth_Rule_93",
+            "hitCounts": 0,
+            "rank": 92,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/8edf2a50-1aa6-41bd-83c5-ec574e1aea90",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "2e4b8e40-5c2d-42d9-9ade-b35c55f345a8",
+            "name": "Auth_Rule_94",
+            "hitCounts": 0,
+            "rank": 93,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/2e4b8e40-5c2d-42d9-9ade-b35c55f345a8",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "644ec42a-fcb9-4e74-82a9-fa241f8f8758",
+            "name": "Auth_Rule_95",
+            "hitCounts": 0,
+            "rank": 94,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/644ec42a-fcb9-4e74-82a9-fa241f8f8758",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "2db719bf-9b2a-40fc-80fe-22db1efd7aa8",
+            "name": "Auth_Rule_96",
+            "hitCounts": 0,
+            "rank": 95,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "rVLAN",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/2db719bf-9b2a-40fc-80fe-22db1efd7aa8",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "d7487826-53b9-40c7-95b5-9e281867e92f",
+            "name": "Auth_Rule_97",
+            "hitCounts": 0,
+            "rank": 96,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/d7487826-53b9-40c7-95b5-9e281867e92f",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "a9b9b9ee-753e-43e0-b356-2c99515ad0ca",
+            "name": "Auth_Rule_98",
+            "hitCounts": 0,
+            "rank": 97,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value2"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/a9b9b9ee-753e-43e0-b356-2c99515ad0ca",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "7c29fd6a-97d8-4492-afd0-6217022e438b",
+            "name": "Auth_Rule_99",
+            "hitCounts": 0,
+            "rank": 98,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value3"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/7c29fd6a-97d8-4492-afd0-6217022e438b",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "50dcf3b5-5507-474a-a251-ef0f51af2a92",
+            "name": "Auth_Rule_100",
+            "hitCounts": 0,
+            "rank": 99,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "NetworkZone",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value1"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "EndPoints",
+                  "attributeName": "Tenant",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "Value4"
+                }
+              ]
+            }
+          },
+          "profile": [
+            "PermitAccess"
+          ],
+          "securityGroup": null,
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization/50dcf3b5-5507-474a-a251-ef0f51af2a92",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
             "default": true,
             "id": "045dfba4-5ad8-4048-84a4-f56c277f60be",
             "name": "Default",
             "hitCounts": 0,
-            "rank": 0,
+            "rank": 100,
             "state": "enabled",
             "condition": null
           },
@@ -1080,26 +6320,6 @@
           "href": "https://10.48.30.215/ers/config/authorizationprofile/6eed36e0-8bff-11e6-996c-525400b48521",
           "type": "application/json"
         }
-      },
-      "44d2d990-feb5-11f0-9863-0050568dbb25": {
-        "id": "44d2d990-feb5-11f0-9863-0050568dbb25",
-        "name": "UDN",
-        "description": "Default profile used for UDN.",
-        "link": {
-          "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/44d2d990-feb5-11f0-9863-0050568dbb25",
-          "type": "application/json"
-        }
-      },
-      "UDN": {
-        "id": "44d2d990-feb5-11f0-9863-0050568dbb25",
-        "name": "UDN",
-        "description": "Default profile used for UDN.",
-        "link": {
-          "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/44d2d990-feb5-11f0-9863-0050568dbb25",
-          "type": "application/json"
-        }
       }
     },
     "authorization_profiles_detail": {
@@ -1438,116 +6658,6 @@
         "link": {
           "rel": "self",
           "href": "https://10.48.30.215/ers/config/authorizationprofile/6eed36e0-8bff-11e6-996c-525400b48521",
-          "type": "application/json"
-        }
-      },
-      "44d2d990-feb5-11f0-9863-0050568dbb25": {
-        "id": "44d2d990-feb5-11f0-9863-0050568dbb25",
-        "name": "UDN",
-        "description": "Default profile used for UDN.",
-        "advancedAttributes": [
-          {
-            "leftHandSideDictionaryAttribue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "Cisco",
-              "attributeName": "cisco-av-pair"
-            },
-            "rightHandSideAttribueValue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "UDN",
-              "attributeName": "Private-group-id"
-            }
-          },
-          {
-            "leftHandSideDictionaryAttribue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "Cisco",
-              "attributeName": "cisco-av-pair"
-            },
-            "rightHandSideAttribueValue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "UDN",
-              "attributeName": "Private-group-name"
-            }
-          },
-          {
-            "leftHandSideDictionaryAttribue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "Cisco",
-              "attributeName": "cisco-av-pair"
-            },
-            "rightHandSideAttribueValue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "UDN",
-              "attributeName": "Private-group-owner"
-            }
-          }
-        ],
-        "accessType": "ACCESS_ACCEPT",
-        "authzProfileType": "SWITCH",
-        "trackMovement": false,
-        "agentlessPosture": false,
-        "serviceTemplate": false,
-        "easywiredSessionCandidate": false,
-        "profileName": "Cisco",
-        "link": {
-          "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/44d2d990-feb5-11f0-9863-0050568dbb25",
-          "type": "application/json"
-        }
-      },
-      "UDN": {
-        "id": "44d2d990-feb5-11f0-9863-0050568dbb25",
-        "name": "UDN",
-        "description": "Default profile used for UDN.",
-        "advancedAttributes": [
-          {
-            "leftHandSideDictionaryAttribue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "Cisco",
-              "attributeName": "cisco-av-pair"
-            },
-            "rightHandSideAttribueValue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "UDN",
-              "attributeName": "Private-group-id"
-            }
-          },
-          {
-            "leftHandSideDictionaryAttribue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "Cisco",
-              "attributeName": "cisco-av-pair"
-            },
-            "rightHandSideAttribueValue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "UDN",
-              "attributeName": "Private-group-name"
-            }
-          },
-          {
-            "leftHandSideDictionaryAttribue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "Cisco",
-              "attributeName": "cisco-av-pair"
-            },
-            "rightHandSideAttribueValue": {
-              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
-              "dictionaryName": "UDN",
-              "attributeName": "Private-group-owner"
-            }
-          }
-        ],
-        "accessType": "ACCESS_ACCEPT",
-        "authzProfileType": "SWITCH",
-        "trackMovement": false,
-        "agentlessPosture": false,
-        "serviceTemplate": false,
-        "easywiredSessionCandidate": false,
-        "profileName": "Cisco",
-        "link": {
-          "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/44d2d990-feb5-11f0-9863-0050568dbb25",
           "type": "application/json"
         }
       }

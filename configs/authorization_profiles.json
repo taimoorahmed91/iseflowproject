@@ -1,6 +1,6 @@
 {
   "SearchResult": {
-    "total": 9,
+    "total": 8,
     "resources": [
       {
         "id": "984b81c0-8c01-11e6-996c-525400b48521",
@@ -79,16 +79,6 @@
         "link": {
           "rel": "self",
           "href": "https://10.48.30.215/ers/config/authorizationprofile/6eed36e0-8bff-11e6-996c-525400b48521",
-          "type": "application/json"
-        }
-      },
-      {
-        "id": "44d2d990-feb5-11f0-9863-0050568dbb25",
-        "name": "UDN",
-        "description": "Default profile used for UDN.",
-        "link": {
-          "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/44d2d990-feb5-11f0-9863-0050568dbb25",
           "type": "application/json"
         }
       }
