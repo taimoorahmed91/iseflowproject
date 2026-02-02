@@ -1,6 +1,151 @@
 [
   {
-    "href": "https://10.48.30.215/ers/config/authorizationprofile/984b81c0-8c01-11e6-996c-525400b48521",
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/e42c74b0-8ae4-11ef-a521-466a5580cc14",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "e42c74b0-8ae4-11ef-a521-466a5580cc14",
+        "name": "ANC_Quarantine",
+        "description": "",
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "daclName": "DENY_ALL_IPV4_TRAFFIC",
+        "profileName": "Cisco",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/e42c74b0-8ae4-11ef-a521-466a5580cc14",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/739b2b70-4302-11f0-b7a8-5e20da1e83c2",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "739b2b70-4302-11f0-b7a8-5e20da1e83c2",
+        "name": "AP_Interface_Template",
+        "description": "",
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "neat": true,
+        "interfaceTemplate": "AP_INTERFACE_TEMPLATE",
+        "profileName": "Cisco",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/739b2b70-4302-11f0-b7a8-5e20da1e83c2",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/8afb4770-58f9-11f0-b7a8-5e20da1e83c2",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "8afb4770-58f9-11f0-b7a8-5e20da1e83c2",
+        "name": "AP_Interface_Template_02",
+        "description": "",
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "neat": true,
+        "interfaceTemplate": "Custom_Interface_Template",
+        "profileName": "Cisco",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/8afb4770-58f9-11f0-b7a8-5e20da1e83c2",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/f95a5690-947f-11f0-9802-5e20da1e83c2",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "f95a5690-947f-11f0-9802-5e20da1e83c2",
+        "name": "Aruba_Guest_L3_Switch_STGS",
+        "description": "Local Switching from L3 Switch for Aruba Guests. Local switching for L3 switch for Aruba SwingKit and APs with Bridge Mode.",
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "webRedirection": {
+          "WebRedirectionType": "CentralizedWebAuth",
+          "acl": "Redirect_ACL_For_Aruba",
+          "portalName": "Portal For Swing-Kit WLC",
+          "displayCertificatesRenewalMessages": true
+        },
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "daclName": "DACL_For_Aruba",
+        "profileName": "Cisco",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/f95a5690-947f-11f0-9802-5e20da1e83c2",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/317e67e0-84a6-11ef-b930-82cce19a2ffc",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "317e67e0-84a6-11ef-b930-82cce19a2ffc",
+        "name": "BYOD_Redirection",
+        "description": "",
+        "advancedAttributes": [
+          {
+            "leftHandSideDictionaryAttribue": {
+              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
+              "dictionaryName": "GuestAccess",
+              "attributeName": "cisco-av-pair"
+            },
+            "rightHandSideAttribueValue": {
+              "AdvancedAttributeValueType": "AttributeValue",
+              "value": "url-filter-preauth=REDIRECT"
+            }
+          }
+        ],
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "vlan": {
+          "nameID": "VL-SAG-GST-05-1200",
+          "tagID": 1
+        },
+        "webRedirection": {
+          "WebRedirectionType": "CentralizedWebAuth",
+          "acl": "REDIRECT",
+          "portalName": "BYOD Portal",
+          "displayCertificatesRenewalMessages": true
+        },
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "profileName": "Cisco",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/317e67e0-84a6-11ef-b930-82cce19a2ffc",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/984b81c0-8c01-11e6-996c-525400b48521",
     "data": {
       "AuthorizationProfile": {
         "id": "984b81c0-8c01-11e6-996c-525400b48521",
@@ -15,7 +160,7 @@
             },
             "rightHandSideAttribueValue": {
               "AdvancedAttributeValueType": "AttributeValue",
-              "value": "url-redirect=https://ip:port/blockedportal/gateway?portal=d7ee483a-5683-49ee-bebf-3c7cb89da887"
+              "value": "url-redirect=https://ip:port/blockedportal/gateway?portal=23be8780-da68-447e-aec3-e159cfb2a288"
             }
           }
         ],
@@ -28,14 +173,14 @@
         "profileName": "Cisco",
         "link": {
           "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/984b81c0-8c01-11e6-996c-525400b48521",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/984b81c0-8c01-11e6-996c-525400b48521",
           "type": "application/json"
         }
       }
     }
   },
   {
-    "href": "https://10.48.30.215/ers/config/authorizationprofile/982ef910-8c01-11e6-996c-525400b48521",
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/982ef910-8c01-11e6-996c-525400b48521",
     "data": {
       "AuthorizationProfile": {
         "id": "982ef910-8c01-11e6-996c-525400b48521",
@@ -52,17 +197,17 @@
         "profileName": "Cisco",
         "link": {
           "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/982ef910-8c01-11e6-996c-525400b48521",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/982ef910-8c01-11e6-996c-525400b48521",
           "type": "application/json"
         }
       }
     }
   },
   {
-    "href": "https://10.48.30.215/ers/config/authorizationprofile/9093cca0-97b7-11f0-853a-0050568f9112",
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/2928e580-4fbe-11ed-a871-0050568f5811",
     "data": {
       "AuthorizationProfile": {
-        "id": "9093cca0-97b7-11f0-853a-0050568f9112",
+        "id": "2928e580-4fbe-11ed-a871-0050568f5811",
         "name": "Cisco_Temporal_Onboard",
         "description": "Onboard the device with Cisco temporal agent",
         "accessType": "ACCESS_ACCEPT",
@@ -80,14 +225,14 @@
         "profileName": "Cisco",
         "link": {
           "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/9093cca0-97b7-11f0-853a-0050568f9112",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/2928e580-4fbe-11ed-a871-0050568f5811",
           "type": "application/json"
         }
       }
     }
   },
   {
-    "href": "https://10.48.30.215/ers/config/authorizationprofile/9859b290-8c01-11e6-996c-525400b48521",
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/9859b290-8c01-11e6-996c-525400b48521",
     "data": {
       "AuthorizationProfile": {
         "id": "9859b290-8c01-11e6-996c-525400b48521",
@@ -108,14 +253,60 @@
         "profileName": "Cisco",
         "link": {
           "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/9859b290-8c01-11e6-996c-525400b48521",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/9859b290-8c01-11e6-996c-525400b48521",
           "type": "application/json"
         }
       }
     }
   },
   {
-    "href": "https://10.48.30.215/ers/config/authorizationprofile/6ef23ff0-8bff-11e6-996c-525400b48521",
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/7f756e80-79fb-11f0-9802-5e20da1e83c2",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "7f756e80-79fb-11f0-9802-5e20da1e83c2",
+        "name": "Customized-FMC-ReadUser",
+        "description": "",
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "asaVpn": "Customized-Read-Only",
+        "profileName": "Cisco",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/7f756e80-79fb-11f0-9802-5e20da1e83c2",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/cb29ecc0-79fb-11f0-9802-5e20da1e83c2",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "cb29ecc0-79fb-11f0-9802-5e20da1e83c2",
+        "name": "Customized-FTD-ReadUser",
+        "description": "",
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "asaVpn": "Customized-Read-Only",
+        "profileName": "Cisco",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/cb29ecc0-79fb-11f0-9802-5e20da1e83c2",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/6ef23ff0-8bff-11e6-996c-525400b48521",
     "data": {
       "AuthorizationProfile": {
         "id": "6ef23ff0-8bff-11e6-996c-525400b48521",
@@ -129,80 +320,274 @@
         "easywiredSessionCandidate": false,
         "link": {
           "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/6ef23ff0-8bff-11e6-996c-525400b48521",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/6ef23ff0-8bff-11e6-996c-525400b48521",
           "type": "application/json"
         }
       }
     }
   },
   {
-    "href": "https://10.48.30.215/ers/config/authorizationprofile/98630160-8c01-11e6-996c-525400b48521",
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/6aea4c20-64b6-11ef-8ac1-867a9b71dcee",
     "data": {
       "AuthorizationProfile": {
-        "id": "98630160-8c01-11e6-996c-525400b48521",
-        "name": "NSP_Onboard",
-        "description": "Onboard the device with Native Supplicant Provisioning",
+        "id": "6aea4c20-64b6-11ef-8ac1-867a9b71dcee",
+        "name": "Efficient_IP_RO",
+        "description": "",
+        "advancedAttributes": [
+          {
+            "leftHandSideDictionaryAttribue": {
+              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
+              "dictionaryName": "EfficientIP",
+              "attributeName": "EfficientIP-Groups"
+            },
+            "rightHandSideAttribueValue": {
+              "AdvancedAttributeValueType": "AttributeValue",
+              "value": "operator"
+            }
+          }
+        ],
         "accessType": "ACCESS_ACCEPT",
         "authzProfileType": "SWITCH",
-        "webRedirection": {
-          "WebRedirectionType": "NativeSupplicanProvisioning",
-          "acl": "ACL_WEBAUTH_REDIRECT",
-          "portalName": "BYOD Portal (default)"
-        },
         "trackMovement": false,
         "agentlessPosture": false,
         "serviceTemplate": false,
         "easywiredSessionCandidate": false,
-        "daclName": "PERMIT_ALL_IPV4_TRAFFIC",
+        "profileName": "Efficient_IP",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/6aea4c20-64b6-11ef-8ac1-867a9b71dcee",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/5b2a77b0-64b6-11ef-8ac1-867a9b71dcee",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "5b2a77b0-64b6-11ef-8ac1-867a9b71dcee",
+        "name": "Efficient_IP_RW",
+        "description": "",
+        "advancedAttributes": [
+          {
+            "leftHandSideDictionaryAttribue": {
+              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
+              "dictionaryName": "EfficientIP",
+              "attributeName": "EfficientIP-Admin-Group"
+            },
+            "rightHandSideAttribueValue": {
+              "AdvancedAttributeValueType": "AttributeValue",
+              "value": "admin"
+            }
+          }
+        ],
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "profileName": "Efficient_IP",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/5b2a77b0-64b6-11ef-8ac1-867a9b71dcee",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/5965d530-4e79-11ef-8ac1-867a9b71dcee",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "5965d530-4e79-11ef-8ac1-867a9b71dcee",
+        "name": "FMC-Admin",
+        "description": "",
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "asaVpn": "Administrator",
         "profileName": "Cisco",
         "link": {
           "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/98630160-8c01-11e6-996c-525400b48521",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/5965d530-4e79-11ef-8ac1-867a9b71dcee",
           "type": "application/json"
         }
       }
     }
   },
   {
-    "href": "https://10.48.30.215/ers/config/authorizationprofile/98408540-8c01-11e6-996c-525400b48521",
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/73ceb270-4e79-11ef-8ac1-867a9b71dcee",
     "data": {
       "AuthorizationProfile": {
-        "id": "98408540-8c01-11e6-996c-525400b48521",
-        "name": "Non_Cisco_IP_Phones",
-        "description": "Default Profile used for Non Cisco Phones.",
+        "id": "73ceb270-4e79-11ef-8ac1-867a9b71dcee",
+        "name": "FMC-ReadUser",
+        "description": "",
         "accessType": "ACCESS_ACCEPT",
         "authzProfileType": "SWITCH",
         "trackMovement": false,
         "agentlessPosture": false,
         "serviceTemplate": false,
         "easywiredSessionCandidate": false,
-        "daclName": "PERMIT_ALL_IPV4_TRAFFIC",
-        "voiceDomainPermission": true,
+        "asaVpn": "ReadUser",
         "profileName": "Cisco",
         "link": {
           "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/98408540-8c01-11e6-996c-525400b48521",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/73ceb270-4e79-11ef-8ac1-867a9b71dcee",
           "type": "application/json"
         }
       }
     }
   },
   {
-    "href": "https://10.48.30.215/ers/config/authorizationprofile/6eed36e0-8bff-11e6-996c-525400b48521",
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/0ec004b0-79fc-11f0-9802-5e20da1e83c2",
     "data": {
       "AuthorizationProfile": {
-        "id": "6eed36e0-8bff-11e6-996c-525400b48521",
-        "name": "PermitAccess",
-        "description": "Default Profile with access type as Access-Accept",
+        "id": "0ec004b0-79fc-11f0-9802-5e20da1e83c2",
+        "name": "FTD-Admin",
+        "description": "",
         "accessType": "ACCESS_ACCEPT",
         "authzProfileType": "SWITCH",
         "trackMovement": false,
         "agentlessPosture": false,
         "serviceTemplate": false,
         "easywiredSessionCandidate": false,
+        "asaVpn": "Administrator",
+        "profileName": "Cisco",
         "link": {
           "rel": "self",
-          "href": "https://10.48.30.215/ers/config/authorizationprofile/6eed36e0-8bff-11e6-996c-525400b48521",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/0ec004b0-79fc-11f0-9802-5e20da1e83c2",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/6873b640-331c-11f0-869f-6e5776bac5ed",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "6873b640-331c-11f0-869f-6e5776bac5ed",
+        "name": "Fortinet FW Admin",
+        "description": "",
+        "advancedAttributes": [
+          {
+            "leftHandSideDictionaryAttribue": {
+              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
+              "dictionaryName": "Fortinet",
+              "attributeName": "Fortinet-Group-Name"
+            },
+            "rightHandSideAttribueValue": {
+              "AdvancedAttributeValueType": "AttributeValue",
+              "value": "Firewall_Admin"
+            }
+          },
+          {
+            "leftHandSideDictionaryAttribue": {
+              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
+              "dictionaryName": "Fortinet",
+              "attributeName": "Fortinet-Access-Profile"
+            },
+            "rightHandSideAttribueValue": {
+              "AdvancedAttributeValueType": "AttributeValue",
+              "value": "RADIUS_User_Access"
+            }
+          }
+        ],
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "profileName": "Cisco",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/6873b640-331c-11f0-869f-6e5776bac5ed",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/e43b5580-331c-11f0-869f-6e5776bac5ed",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "e43b5580-331c-11f0-869f-6e5776bac5ed",
+        "name": "Fortinet FW ReadOnly",
+        "description": "",
+        "advancedAttributes": [
+          {
+            "leftHandSideDictionaryAttribue": {
+              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
+              "dictionaryName": "Fortinet",
+              "attributeName": "Fortinet-Group-Name"
+            },
+            "rightHandSideAttribueValue": {
+              "AdvancedAttributeValueType": "AttributeValue",
+              "value": "Firewall_ReadUser"
+            }
+          },
+          {
+            "leftHandSideDictionaryAttribue": {
+              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
+              "dictionaryName": "Fortinet",
+              "attributeName": "Fortinet-Access-Profile"
+            },
+            "rightHandSideAttribueValue": {
+              "AdvancedAttributeValueType": "AttributeValue",
+              "value": "RADIUS_User_Access"
+            }
+          }
+        ],
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "profileName": "Cisco",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/e43b5580-331c-11f0-869f-6e5776bac5ed",
+          "type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "href": "https://10.48.30.212/ers/config/authorizationprofile/82bd2950-84d9-11f0-9802-5e20da1e83c2",
+    "data": {
+      "AuthorizationProfile": {
+        "id": "82bd2950-84d9-11f0-9802-5e20da1e83c2",
+        "name": "Guest-Aruba_MC",
+        "description": "",
+        "advancedAttributes": [
+          {
+            "leftHandSideDictionaryAttribue": {
+              "AdvancedAttributeValueType": "AdvancedDictionaryAttribute",
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Named-User-Vlan"
+            },
+            "rightHandSideAttribueValue": {
+              "AdvancedAttributeValueType": "AttributeValue",
+              "value": "VL-Wifi4Mobile"
+            }
+          }
+        ],
+        "accessType": "ACCESS_ACCEPT",
+        "authzProfileType": "SWITCH",
+        "acl": "swsguest01-guest",
+        "trackMovement": false,
+        "agentlessPosture": false,
+        "serviceTemplate": false,
+        "easywiredSessionCandidate": false,
+        "profileName": "Aruba_AOS",
+        "link": {
+          "rel": "self",
+          "href": "https://10.48.30.212/ers/config/authorizationprofile/82bd2950-84d9-11f0-9802-5e20da1e83c2",
           "type": "application/json"
         }
       }

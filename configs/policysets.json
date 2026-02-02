@@ -3,9 +3,9 @@
   "response": [
     {
       "default": false,
-      "id": "52a46a92-1525-480b-9b79-ca9db77e8ef8",
-      "name": "PolicySet2",
-      "description": "Sample 1",
+      "id": "01fe8ffc-d845-484d-aae7-ce35699ad48b",
+      "name": "BPAMFADUO",
+      "description": null,
       "hitCounts": 0,
       "rank": 0,
       "state": "enabled",
@@ -13,58 +13,1610 @@
         "link": null,
         "conditionType": "ConditionAttributes",
         "isNegate": false,
-        "dictionaryName": "Normalised Radius",
-        "attributeName": "RadiusFlowType",
+        "dictionaryName": "DEVICE",
+        "attributeName": "Device Type",
         "operator": "equals",
         "dictionaryValue": null,
-        "attributeValue": "Wireless802_1x"
+        "attributeValue": "All Device Types#DUO"
       },
       "serviceName": "Default Network Access",
       "isProxy": false,
       "link": {
         "rel": "self",
-        "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/52a46a92-1525-480b-9b79-ca9db77e8ef8",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/01fe8ffc-d845-484d-aae7-ce35699ad48b",
         "type": "application/json"
       }
     },
     {
       "default": false,
-      "id": "04574412-7127-43d6-b1ca-0a00ba7a0199",
-      "name": "PolicySet1",
-      "description": "Sample 1",
+      "id": "28614b83-c69f-4c56-80fa-399d1b27fa29",
+      "name": "IMO Wired Dot1x Aruba_CX",
+      "description": "IMO Policy",
       "hitCounts": 0,
       "rank": 1,
       "state": "enabled",
       "condition": {
         "link": null,
-        "conditionType": "ConditionReference",
+        "conditionType": "ConditionAndBlock",
         "isNegate": false,
-        "name": "Wireless_802.1X",
-        "id": "caf94e42-41dc-4919-a457-d4bba92646b6",
-        "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionReference",
+            "isNegate": false,
+            "name": "Wired_802.1X",
+            "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+            "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-IlAsh-Cluster-6300m"
+          }
+        ]
       },
       "serviceName": "Default Network Access",
       "isProxy": false,
       "link": {
         "rel": "self",
-        "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/28614b83-c69f-4c56-80fa-399d1b27fa29",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "21cb1e76-6365-4a73-b733-16dd82dabec3",
+      "name": "IMO WiredMAB Aruba_CX",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 2,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionReference",
+            "isNegate": false,
+            "name": "Wired_MAB",
+            "id": "b8673a3f-caab-421f-b490-e4fc3a9218a3",
+            "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-IlAsh-Cluster-6300m"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/21cb1e76-6365-4a73-b733-16dd82dabec3",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "c912b2e8-134e-451e-854a-c6b13dcbdb11",
+      "name": "IMO Wired Dot1x Juniper",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 3,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionReference",
+            "isNegate": false,
+            "name": "Wired_802.1X",
+            "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+            "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "DEVICE",
+            "attributeName": "Device Type",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "All Device Types#Juniper Switches"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/c912b2e8-134e-451e-854a-c6b13dcbdb11",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "512753af-a755-4c82-83ca-ca126a73818f",
+      "name": "IMO WiredMAB Juniper",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 4,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionReference",
+            "isNegate": false,
+            "name": "Wired_MAB",
+            "id": "b8673a3f-caab-421f-b490-e4fc3a9218a3",
+            "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "DEVICE",
+            "attributeName": "Device Type",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "All Device Types#Juniper Switches"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/512753af-a755-4c82-83ca-ca126a73818f",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "8d162669-abef-43d8-8e70-3e2a9150a97f",
+      "name": "IMO Wired Dot1x Cisco",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 5,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionReference",
+            "isNegate": false,
+            "name": "Wired_802.1X",
+            "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+            "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/8d162669-abef-43d8-8e70-3e2a9150a97f",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "15bad6ce-4a7a-4c43-b037-a61de253cf1f",
+      "name": "IMO WiredMAB Cisco",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 6,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionReference",
+            "isNegate": false,
+            "name": "Wired_MAB",
+            "id": "b8673a3f-caab-421f-b490-e4fc3a9218a3",
+            "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/15bad6ce-4a7a-4c43-b037-a61de253cf1f",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "efaf8059-df08-425a-824e-88e87c7e139d",
+      "name": "IMO SSID SWSGP01 Cisco",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 7,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Radius",
+            "attributeName": "Called-Station-ID",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "SWSGP01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/efaf8059-df08-425a-824e-88e87c7e139d",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "5dcf25f9-dc06-478a-9c62-af9d992c7d00",
+      "name": "IMO SSID SWSGP01 Aruba_VC",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 8,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Aruba",
+            "attributeName": "Aruba-Essid-Name",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "SWSGP01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/5dcf25f9-dc06-478a-9c62-af9d992c7d00",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "ac3c2501-0152-45c6-bc1b-523abba6b620",
+      "name": "IMO SSID SWSGP01 Aruba_MC",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 9,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Aruba",
+            "attributeName": "Aruba-Essid-Name",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "SWSGP01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMOMC-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ac3c2501-0152-45c6-bc1b-523abba6b620",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "0d817813-c699-444e-b47d-10fce93daddc",
+      "name": "IMO SSID SWSGUEST01 Aruba_VC TEST BCU 465",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 10,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Aruba",
+            "attributeName": "Aruba-Essid-Name",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "SWSGUEST01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-w-fr-bcu465-A-001-vc"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/0d817813-c699-444e-b47d-10fce93daddc",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "b97bd693-b877-4b8d-ab7b-21f713608c11",
+      "name": "IMO SSID SWSGUEST01 Cisco FLEX CONNECT",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 11,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Radius",
+            "attributeName": "Called-Station-ID",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "SWSGUEST01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionOrBlock",
+            "isNegate": false,
+            "children": [
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Network Access",
+                "attributeName": "NetworkDeviceName",
+                "operator": "startsWith",
+                "dictionaryValue": null,
+                "attributeValue": "IMO-w-kr-seljo"
+              },
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Network Access",
+                "attributeName": "NetworkDeviceName",
+                "operator": "startsWith",
+                "dictionaryValue": null,
+                "attributeValue": "IMO-w-br-saosp00"
+              },
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Network Access",
+                "attributeName": "NetworkDeviceName",
+                "operator": "startsWith",
+                "dictionaryValue": null,
+                "attributeValue": "IMO-w-us-sacfa"
+              },
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Network Access",
+                "attributeName": "NetworkDeviceName",
+                "operator": "startsWith",
+                "dictionaryValue": null,
+                "attributeValue": "IMO-w-br-junga"
+              }
+            ]
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/b97bd693-b877-4b8d-ab7b-21f713608c11",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "74df3935-6ddc-4efc-ba0f-f4ac6b2d30c8",
+      "name": "IMO SSID SWSGUEST01 Aruba_VC_STG_S",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 12,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Aruba",
+            "attributeName": "Aruba-Essid-Name",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "SWSGUEST01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "VMC"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/74df3935-6ddc-4efc-ba0f-f4ac6b2d30c8",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "9f379f4c-99a6-4564-be91-2d81fa283ca8",
+      "name": "IMO SSID SWSGUEST01 Cisco",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 13,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Radius",
+            "attributeName": "Called-Station-ID",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "SWSGUEST01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9f379f4c-99a6-4564-be91-2d81fa283ca8",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "ea6023c4-49dc-4e2e-af6e-f7ea060ce950",
+      "name": "IMO SSID SWSGUEST01 Aruba_VC_STG_S_L3 Switch",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 14,
+      "state": "disabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "Network Access",
+        "attributeName": "NetworkDeviceName",
+        "operator": "contains",
+        "dictionaryValue": null,
+        "attributeValue": "r-de-stgs-b-ug-143"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ea6023c4-49dc-4e2e-af6e-f7ea060ce950",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "0fd1892e-5ffe-45fd-ba76-4a7b26bf8b98",
+      "name": "IMO SSID SWSGUEST01 Aruba_VC",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 15,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Aruba",
+            "attributeName": "Aruba-Essid-Name",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "SWSGUEST01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/0fd1892e-5ffe-45fd-ba76-4a7b26bf8b98",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "1189e1d5-9a0f-4d17-ad78-524d90b48d48",
+      "name": "IMO SSID SWSGUEST01 Aruba_MC",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 16,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Aruba",
+            "attributeName": "Aruba-Essid-Name",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "SWSGUEST01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMOMC-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/1189e1d5-9a0f-4d17-ad78-524d90b48d48",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "e7fb07a5-f135-4078-94c5-8f164e3c6fdb",
+      "name": "IMO SSID SWSSAA01 Cisco",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 17,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Radius",
+            "attributeName": "Called-Station-ID",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "SWSSAA01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/e7fb07a5-f135-4078-94c5-8f164e3c6fdb",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "d2c7284a-5f26-41ef-9624-30275c7ff7e5",
+      "name": "IMO SSID SWSSAA01 Aruba_VC",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 18,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Aruba",
+            "attributeName": "Aruba-Essid-Name",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "SWSSAA01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d2c7284a-5f26-41ef-9624-30275c7ff7e5",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "01159fb1-b1ca-4b35-9283-1af3874d9ef8",
+      "name": "IMO SSID SWSSAA01 Aruba_MC",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 19,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Aruba",
+            "attributeName": "Aruba-Essid-Name",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "SWSSAA01"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMOMC-"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/01159fb1-b1ca-4b35-9283-1af3874d9ef8",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "9dc7a429-aaa7-49b2-9aa3-a19aee2a9c9c",
+      "name": "IMO SSID LOCAL SPECIFIC Cisco",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 20,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionOrBlock",
+            "isNegate": false,
+            "children": [
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Radius",
+                "attributeName": "Called-Station-ID",
+                "operator": "notEquals",
+                "dictionaryValue": null,
+                "attributeValue": "SGWSGP01"
+              },
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Radius",
+                "attributeName": "Called-Station-ID",
+                "operator": "notEquals",
+                "dictionaryValue": null,
+                "attributeValue": "SWSGUEST01"
+              },
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Radius",
+                "attributeName": "Called-Station-ID",
+                "operator": "notEquals",
+                "dictionaryValue": null,
+                "attributeValue": "SWSSAA01"
+              }
+            ]
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Radius",
+            "attributeName": "Called-Station-ID",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "SW"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9dc7a429-aaa7-49b2-9aa3-a19aee2a9c9c",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "906da95f-e015-4a3c-827f-661ae8b0073f",
+      "name": "IMO SSID LOCAL SPECIFIC Aruba_VC",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 21,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMO-"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionOrBlock",
+            "isNegate": false,
+            "children": [
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Aruba",
+                "attributeName": "Aruba-Essid-Name",
+                "operator": "notEquals",
+                "dictionaryValue": null,
+                "attributeValue": "SGWSGP01"
+              },
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Aruba",
+                "attributeName": "Aruba-Essid-Name",
+                "operator": "notEquals",
+                "dictionaryValue": null,
+                "attributeValue": "SWSGUEST01"
+              },
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Aruba",
+                "attributeName": "Aruba-Essid-Name",
+                "operator": "notEquals",
+                "dictionaryValue": null,
+                "attributeValue": "SWSSAA01"
+              }
+            ]
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Aruba",
+            "attributeName": "Aruba-Essid-Name",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "SW"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/906da95f-e015-4a3c-827f-661ae8b0073f",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "ad06bf7f-0a57-42cc-afec-47d0d9c48b18",
+      "name": "IMO SSID LOCAL SPECIFIC Aruba_MC",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 22,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "IMOMC-"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionOrBlock",
+            "isNegate": false,
+            "children": [
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Aruba",
+                "attributeName": "Aruba-Essid-Name",
+                "operator": "notEquals",
+                "dictionaryValue": null,
+                "attributeValue": "SGWSGP01"
+              },
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Aruba",
+                "attributeName": "Aruba-Essid-Name",
+                "operator": "notEquals",
+                "dictionaryValue": null,
+                "attributeValue": "SWSGUEST01"
+              },
+              {
+                "link": null,
+                "conditionType": "ConditionAttributes",
+                "isNegate": false,
+                "dictionaryName": "Aruba",
+                "attributeName": "Aruba-Essid-Name",
+                "operator": "notEquals",
+                "dictionaryValue": null,
+                "attributeValue": "SWSSAA01"
+              }
+            ]
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Aruba",
+            "attributeName": "Aruba-Essid-Name",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "SW"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ad06bf7f-0a57-42cc-afec-47d0d9c48b18",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "bb2e3edc-b400-4c6c-946b-38f4ab21c25f",
+      "name": "FMO Wired Dot1x_AD_Test",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 23,
+      "state": "disabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionReference",
+            "isNegate": false,
+            "name": "Wired_802.1X",
+            "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+            "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "Device IP Address",
+            "operator": "ipEquals",
+            "dictionaryValue": null,
+            "attributeValue": "10.208.0.74"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/bb2e3edc-b400-4c6c-946b-38f4ab21c25f",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "d39abc72-6797-48bc-b21f-6e024e5a11c8",
+      "name": "FMO Wired Dot1x_ERL Site",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 24,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Normalised Radius",
+            "attributeName": "RadiusFlowType",
+            "operator": "equals",
+            "dictionaryValue": null,
+            "attributeValue": "Wired802_1x"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "startsWith",
+            "dictionaryValue": null,
+            "attributeValue": "E-DE-ERL"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d39abc72-6797-48bc-b21f-6e024e5a11c8",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "553042cd-0747-4766-af8a-2b1d7c297d4d",
+      "name": "FMO Wired Dot1x",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 25,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionReference",
+        "isNegate": false,
+        "name": "Wired_802.1X",
+        "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+        "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/553042cd-0747-4766-af8a-2b1d7c297d4d",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "14719067-943b-4a0f-aa22-ddc2d32be01b",
+      "name": "FMO WiredMAB",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 26,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionReference",
+        "isNegate": false,
+        "name": "Wired_MAB",
+        "id": "b8673a3f-caab-421f-b490-e4fc3a9218a3",
+        "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/14719067-943b-4a0f-aa22-ddc2d32be01b",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "1f771baf-b34a-4e03-be47-2b37354a8cf4",
+      "name": "FMO SSID Siemens Network_Erlangen",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 27,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAndBlock",
+        "isNegate": false,
+        "children": [
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Radius",
+            "attributeName": "Called-Station-ID",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "Siemens Network"
+          },
+          {
+            "link": null,
+            "conditionType": "ConditionAttributes",
+            "isNegate": false,
+            "dictionaryName": "Network Access",
+            "attributeName": "NetworkDeviceName",
+            "operator": "contains",
+            "dictionaryValue": null,
+            "attributeValue": "W-DE-ERL-C01-B005-F00-001"
+          }
+        ]
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/1f771baf-b34a-4e03-be47-2b37354a8cf4",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "d20a7a45-24ab-4dbe-8bcc-625fcaf837f7",
+      "name": "FMO SSID Siemens Network",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 28,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "Radius",
+        "attributeName": "Called-Station-ID",
+        "operator": "contains",
+        "dictionaryValue": null,
+        "attributeValue": "Siemens Network"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d20a7a45-24ab-4dbe-8bcc-625fcaf837f7",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "be725450-8b0e-481c-b0ab-d377b98b945a",
+      "name": "FMO SSID Siemens Guest",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 29,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "Radius",
+        "attributeName": "Called-Station-ID",
+        "operator": "contains",
+        "dictionaryValue": null,
+        "attributeValue": "Siemens Guest"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/be725450-8b0e-481c-b0ab-d377b98b945a",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "c990a6f1-c6cc-4a5f-811f-a1e2ab280e19",
+      "name": "FMO SSID IPv6",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 30,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "Radius",
+        "attributeName": "Called-Station-ID",
+        "operator": "contains",
+        "dictionaryValue": null,
+        "attributeValue": "Guest_IPv6_Testing"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/c990a6f1-c6cc-4a5f-811f-a1e2ab280e19",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "9d540763-3da0-4110-828c-9340a64395e8",
+      "name": "FMO Efficient_IP_RBAC",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 31,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "DEVICE",
+        "attributeName": "Device Type",
+        "operator": "equals",
+        "dictionaryValue": null,
+        "attributeValue": "All Device Types#DDI"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9d540763-3da0-4110-828c-9340a64395e8",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "a761a30b-e6cd-4145-8471-2f346bc44d55",
+      "name": "FMO F5",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 32,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "DEVICE",
+        "attributeName": "Device Type",
+        "operator": "equals",
+        "dictionaryValue": null,
+        "attributeValue": "All Device Types#F5-LB"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/a761a30b-e6cd-4145-8471-2f346bc44d55",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "b549d676-0242-4a2e-ad31-59d2ba90912d",
+      "name": "FMO Spaces RBAC",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 33,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "DEVICE",
+        "attributeName": "Device Type",
+        "operator": "equals",
+        "dictionaryValue": null,
+        "attributeValue": "All Device Types#Space-Connector"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/b549d676-0242-4a2e-ad31-59d2ba90912d",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "63100ef7-3a23-4a15-8f0f-d503fcac3f65",
+      "name": "FMO FMC RBAC",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 34,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "DEVICE",
+        "attributeName": "Device Type",
+        "operator": "equals",
+        "dictionaryValue": null,
+        "attributeValue": "All Device Types#FMC"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/63100ef7-3a23-4a15-8f0f-d503fcac3f65",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "fac007e7-c23e-43b0-9450-fdf92de52c95",
+      "name": "FMO FTD RBAC",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 35,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "DEVICE",
+        "attributeName": "Device Type",
+        "operator": "equals",
+        "dictionaryValue": null,
+        "attributeValue": "All Device Types#FTD"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/fac007e7-c23e-43b0-9450-fdf92de52c95",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "8dcc396d-36f7-4d87-a105-67ab9790ad27",
+      "name": "IMO_Junos_Space",
+      "description": "IMO Policy",
+      "hitCounts": 0,
+      "rank": 36,
+      "state": "enabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "DEVICE",
+        "attributeName": "Device Type",
+        "operator": "equals",
+        "dictionaryValue": null,
+        "attributeValue": "All Device Types#IMO-FW"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/8dcc396d-36f7-4d87-a105-67ab9790ad27",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "7718cb71-2995-4560-b168-cbc20f7c879b",
+      "name": "FMO SSID Siemens BYOD",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 37,
+      "state": "disabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "Radius",
+        "attributeName": "Called-Station-ID",
+        "operator": "contains",
+        "dictionaryValue": null,
+        "attributeValue": "Siemens BYOD"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/7718cb71-2995-4560-b168-cbc20f7c879b",
+        "type": "application/json"
+      }
+    },
+    {
+      "default": false,
+      "id": "fa0b9483-c489-4b9b-94d8-e35266144ae3",
+      "name": "FMO SSID Siemens iPSK",
+      "description": "FMO Policy",
+      "hitCounts": 0,
+      "rank": 38,
+      "state": "disabled",
+      "condition": {
+        "link": null,
+        "conditionType": "ConditionAttributes",
+        "isNegate": false,
+        "dictionaryName": "Radius",
+        "attributeName": "Called-Station-ID",
+        "operator": "contains",
+        "dictionaryValue": null,
+        "attributeValue": "Siemens iPSK"
+      },
+      "serviceName": "Default Network Access",
+      "isProxy": false,
+      "link": {
+        "rel": "self",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/fa0b9483-c489-4b9b-94d8-e35266144ae3",
         "type": "application/json"
       }
     },
     {
       "default": true,
-      "id": "e5523017-a737-4b08-9590-2737b7c77ddc",
+      "id": "50d2588d-b6ed-4301-aafd-d5dc0cccc328",
       "name": "Default",
       "description": "Default policy set",
       "hitCounts": 0,
-      "rank": 2,
+      "rank": 39,
       "state": "enabled",
       "condition": null,
       "serviceName": "Default Network Access",
       "isProxy": false,
       "link": {
         "rel": "self",
-        "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/e5523017-a737-4b08-9590-2737b7c77ddc",
+        "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/50d2588d-b6ed-4301-aafd-d5dc0cccc328",
         "type": "application/json"
       }
     }

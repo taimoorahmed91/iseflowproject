@@ -9,13 +9,19 @@ import requests
 import json
 import itertools
 import time
+import os
+from dotenv import load_dotenv
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+# Load environment variables
+load_dotenv()
+
 # ISE Configuration
-ISE_URL = "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization"
-ISE_USERNAME = "admin"
-ISE_PASSWORD = "C1sc0123@"
+ISE_HOST = os.getenv('ISE_HOST', '10.48.30.215')
+ISE_URL = f"https://{ISE_HOST}/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authorization"
+ISE_USERNAME = os.getenv('ISE_USERNAME', 'admin')
+ISE_PASSWORD = os.getenv('ISE_PASSWORD', 'C1sc0123@')
 
 # Values to iterate through
 VALUES = ["Value1", "Value2", "Value3"]

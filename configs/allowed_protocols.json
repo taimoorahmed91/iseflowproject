@@ -8,7 +8,7 @@
         "description": "Default Allowed Protocol Service Device Admin",
         "link": {
           "rel": "self",
-          "href": "https://10.48.30.215/ers/config/allowedprotocols/926901b0-8c01-11e6-996c-525400b48521",
+          "href": "https://10.48.30.212/ers/config/allowedprotocols/926901b0-8c01-11e6-996c-525400b48521",
           "type": "application/json"
         }
       },
@@ -18,7 +18,7 @@
         "description": "Default Allowed Protocol Service",
         "link": {
           "rel": "self",
-          "href": "https://10.48.30.215/ers/config/allowedprotocols/92613980-8c01-11e6-996c-525400b48521",
+          "href": "https://10.48.30.212/ers/config/allowedprotocols/92613980-8c01-11e6-996c-525400b48521",
           "type": "application/json"
         }
       }

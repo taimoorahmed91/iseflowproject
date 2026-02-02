@@ -1,27 +1,27 @@
 [
   {
-    "policy_set_href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/52a46a92-1525-480b-9b79-ca9db77e8ef8",
-    "authentication_url": "https://10.48.30.215/api/v1/policy/network-access/policy-set/52a46a92-1525-480b-9b79-ca9db77e8ef8/authentication",
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/01fe8ffc-d845-484d-aae7-ce35699ad48b",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/01fe8ffc-d845-484d-aae7-ce35699ad48b/authentication",
     "data": {
       "version": "1.0.0",
       "response": [
         {
           "rule": {
             "default": true,
-            "id": "0a5e0b9c-6d68-43ea-8ecd-22a65d9d567b",
+            "id": "d7191df8-b551-4add-b2ff-24fdbfa655f5",
             "name": "Default",
             "hitCounts": 0,
             "rank": 0,
             "state": "enabled",
             "condition": null
           },
-          "identitySourceName": "All_User_ID_Stores",
+          "identitySourceName": "Internal Users",
           "ifAuthFail": "REJECT",
           "ifUserNotFound": "REJECT",
           "ifProcessFail": "DROP",
           "link": {
             "rel": "self",
-            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/52a46a92-1525-480b-9b79-ca9db77e8ef8/authentication/0a5e0b9c-6d68-43ea-8ecd-22a65d9d567b",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/01fe8ffc-d845-484d-aae7-ce35699ad48b/authentication/d7191df8-b551-4add-b2ff-24fdbfa655f5",
             "type": "application/json"
           }
         }
@@ -29,70 +29,82 @@
     }
   },
   {
-    "policy_set_href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199",
-    "authentication_url": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authentication",
-    "data": {
-      "version": "1.0.0",
-      "response": [
-        {
-          "rule": {
-            "default": true,
-            "id": "b3af3852-9753-44e6-9794-f1b52b0fd413",
-            "name": "Default",
-            "hitCounts": 0,
-            "rank": 0,
-            "state": "enabled",
-            "condition": null
-          },
-          "identitySourceName": "All_User_ID_Stores",
-          "ifAuthFail": "REJECT",
-          "ifUserNotFound": "REJECT",
-          "ifProcessFail": "DROP",
-          "link": {
-            "rel": "self",
-            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/04574412-7127-43d6-b1ca-0a00ba7a0199/authentication/b3af3852-9753-44e6-9794-f1b52b0fd413",
-            "type": "application/json"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "policy_set_href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/e5523017-a737-4b08-9590-2737b7c77ddc",
-    "authentication_url": "https://10.48.30.215/api/v1/policy/network-access/policy-set/e5523017-a737-4b08-9590-2737b7c77ddc/authentication",
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/28614b83-c69f-4c56-80fa-399d1b27fa29",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/28614b83-c69f-4c56-80fa-399d1b27fa29/authentication",
     "data": {
       "version": "1.0.0",
       "response": [
         {
           "rule": {
             "default": false,
-            "id": "12c8665b-7764-4a0c-8e0e-774e68ba4a0d",
-            "name": "MAB",
+            "id": "3be9b6e9-af99-4430-ad78-c461f22c87f2",
+            "name": "Wired Dot1x",
             "hitCounts": 0,
             "rank": 0,
             "state": "enabled",
             "condition": {
               "link": null,
-              "conditionType": "ConditionOrBlock",
+              "conditionType": "ConditionReference",
               "isNegate": false,
-              "children": [
-                {
-                  "link": null,
-                  "conditionType": "ConditionReference",
-                  "isNegate": false,
-                  "name": "Wired_MAB",
-                  "id": "459966b0-595d-4539-aa5d-c1f36b08cf1a",
-                  "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
-                },
-                {
-                  "link": null,
-                  "conditionType": "ConditionReference",
-                  "isNegate": false,
-                  "name": "Wireless_MAB",
-                  "id": "98e51a6f-58a6-4336-8671-161e9bea1a8f",
-                  "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile."
-                }
-              ]
+              "name": "Wired_802.1X",
+              "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+              "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/28614b83-c69f-4c56-80fa-399d1b27fa29/authentication/3be9b6e9-af99-4430-ad78-c461f22c87f2",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "70acd027-a0e6-417f-aeee-d56bc85fa395",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/28614b83-c69f-4c56-80fa-399d1b27fa29/authentication/70acd027-a0e6-417f-aeee-d56bc85fa395",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/21cb1e76-6365-4a73-b733-16dd82dabec3",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/21cb1e76-6365-4a73-b733-16dd82dabec3/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "a67fbe9f-532a-4e9d-a403-c053bc240018",
+            "name": "WiredMAB",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wired_MAB",
+              "id": "b8673a3f-caab-421f-b490-e4fc3a9218a3",
+              "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
             }
           },
           "identitySourceName": "Internal Endpoints",
@@ -101,41 +113,19 @@
           "ifProcessFail": "DROP",
           "link": {
             "rel": "self",
-            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/e5523017-a737-4b08-9590-2737b7c77ddc/authentication/12c8665b-7764-4a0c-8e0e-774e68ba4a0d",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/21cb1e76-6365-4a73-b733-16dd82dabec3/authentication/a67fbe9f-532a-4e9d-a403-c053bc240018",
             "type": "application/json"
           }
         },
         {
           "rule": {
-            "default": false,
-            "id": "a2d439be-9dd1-48b4-8024-63147b3737a9",
-            "name": "Dot1X",
+            "default": true,
+            "id": "51628493-f786-4444-827e-1ab674d9c143",
+            "name": "Default",
             "hitCounts": 0,
             "rank": 1,
             "state": "enabled",
-            "condition": {
-              "link": null,
-              "conditionType": "ConditionOrBlock",
-              "isNegate": false,
-              "children": [
-                {
-                  "link": null,
-                  "conditionType": "ConditionReference",
-                  "isNegate": false,
-                  "name": "Wired_802.1X",
-                  "id": "8784b627-4a03-47b3-beec-20f7c70dda1c",
-                  "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
-                },
-                {
-                  "link": null,
-                  "conditionType": "ConditionReference",
-                  "isNegate": false,
-                  "name": "Wireless_802.1X",
-                  "id": "caf94e42-41dc-4919-a457-d4bba92646b6",
-                  "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
-                }
-              ]
-            }
+            "condition": null
           },
           "identitySourceName": "All_User_ID_Stores",
           "ifAuthFail": "REJECT",
@@ -143,14 +133,1047 @@
           "ifProcessFail": "DROP",
           "link": {
             "rel": "self",
-            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/e5523017-a737-4b08-9590-2737b7c77ddc/authentication/a2d439be-9dd1-48b4-8024-63147b3737a9",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/21cb1e76-6365-4a73-b733-16dd82dabec3/authentication/51628493-f786-4444-827e-1ab674d9c143",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/c912b2e8-134e-451e-854a-c6b13dcbdb11",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/c912b2e8-134e-451e-854a-c6b13dcbdb11/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "ff9cec79-73fc-469f-92f6-1176b77c0e73",
+            "name": "Wired Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wired_802.1X",
+              "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+              "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/c912b2e8-134e-451e-854a-c6b13dcbdb11/authentication/ff9cec79-73fc-469f-92f6-1176b77c0e73",
             "type": "application/json"
           }
         },
         {
           "rule": {
             "default": true,
-            "id": "c1b2c243-7d03-4857-83c9-19f668a46fa6",
+            "id": "6b3c8e2e-885c-41fd-8d69-c38cd9c49853",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/c912b2e8-134e-451e-854a-c6b13dcbdb11/authentication/6b3c8e2e-885c-41fd-8d69-c38cd9c49853",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/512753af-a755-4c82-83ca-ca126a73818f",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/512753af-a755-4c82-83ca-ca126a73818f/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "f972c4c8-db39-4e11-a9ad-396e9e144a41",
+            "name": "WiredMAB",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wired_MAB",
+              "id": "b8673a3f-caab-421f-b490-e4fc3a9218a3",
+              "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/512753af-a755-4c82-83ca-ca126a73818f/authentication/f972c4c8-db39-4e11-a9ad-396e9e144a41",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "0630cc47-89d6-49f8-a484-8e1dd1a388bf",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/512753af-a755-4c82-83ca-ca126a73818f/authentication/0630cc47-89d6-49f8-a484-8e1dd1a388bf",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/8d162669-abef-43d8-8e70-3e2a9150a97f",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/8d162669-abef-43d8-8e70-3e2a9150a97f/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "b6513236-822a-4fec-b463-9ec6dbe156e1",
+            "name": "Wired Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wired_802.1X",
+              "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+              "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/8d162669-abef-43d8-8e70-3e2a9150a97f/authentication/b6513236-822a-4fec-b463-9ec6dbe156e1",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "2d1e5133-072b-42ba-b971-9fefc8e246e3",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/8d162669-abef-43d8-8e70-3e2a9150a97f/authentication/2d1e5133-072b-42ba-b971-9fefc8e246e3",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/15bad6ce-4a7a-4c43-b037-a61de253cf1f",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/15bad6ce-4a7a-4c43-b037-a61de253cf1f/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "c36f901e-617e-437a-825e-910a6d96921c",
+            "name": "WiredMAB",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wired_MAB",
+              "id": "b8673a3f-caab-421f-b490-e4fc3a9218a3",
+              "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/15bad6ce-4a7a-4c43-b037-a61de253cf1f/authentication/c36f901e-617e-437a-825e-910a6d96921c",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "fa4525e8-75de-42c8-bd91-e05f0f3984aa",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/15bad6ce-4a7a-4c43-b037-a61de253cf1f/authentication/fa4525e8-75de-42c8-bd91-e05f0f3984aa",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/efaf8059-df08-425a-824e-88e87c7e139d",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/efaf8059-df08-425a-824e-88e87c7e139d/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "aab9ea2b-212c-4504-a540-d34fd5df6d0e",
+            "name": "Wireless Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_802.1X",
+              "id": "a0d3ce4a-8c2e-473f-bf66-ab27619de4ed",
+              "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/efaf8059-df08-425a-824e-88e87c7e139d/authentication/aab9ea2b-212c-4504-a540-d34fd5df6d0e",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "fa9e3fe8-17e7-409e-beeb-8c513d6692ca",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/efaf8059-df08-425a-824e-88e87c7e139d/authentication/fa9e3fe8-17e7-409e-beeb-8c513d6692ca",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/5dcf25f9-dc06-478a-9c62-af9d992c7d00",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/5dcf25f9-dc06-478a-9c62-af9d992c7d00/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "9d97a54d-9a10-472c-b34f-c884fe282407",
+            "name": "Wireless Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "contains",
+              "dictionaryValue": null,
+              "attributeValue": "SWSGP01"
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/5dcf25f9-dc06-478a-9c62-af9d992c7d00/authentication/9d97a54d-9a10-472c-b34f-c884fe282407",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "0368a806-1693-409e-b9f5-29cff2c28e3d",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/5dcf25f9-dc06-478a-9c62-af9d992c7d00/authentication/0368a806-1693-409e-b9f5-29cff2c28e3d",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ac3c2501-0152-45c6-bc1b-523abba6b620",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ac3c2501-0152-45c6-bc1b-523abba6b620/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "e26106a0-2523-40d4-b1d2-fec58f142117",
+            "name": "Wireless Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "contains",
+              "dictionaryValue": null,
+              "attributeValue": "SWSGP01"
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ac3c2501-0152-45c6-bc1b-523abba6b620/authentication/e26106a0-2523-40d4-b1d2-fec58f142117",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "aa065c0e-db36-4953-a711-8e77a0da3b29",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ac3c2501-0152-45c6-bc1b-523abba6b620/authentication/aa065c0e-db36-4953-a711-8e77a0da3b29",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/0d817813-c699-444e-b47d-10fce93daddc",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/0d817813-c699-444e-b47d-10fce93daddc/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "15577bff-25bd-49bd-aaad-2bbc2241c451",
+            "name": "Guest",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "contains",
+              "dictionaryValue": null,
+              "attributeValue": "SWSGUEST01"
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/0d817813-c699-444e-b47d-10fce93daddc/authentication/15577bff-25bd-49bd-aaad-2bbc2241c451",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "43399967-7db6-41f0-8f5b-5cdb31d39910",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/0d817813-c699-444e-b47d-10fce93daddc/authentication/43399967-7db6-41f0-8f5b-5cdb31d39910",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/b97bd693-b877-4b8d-ab7b-21f713608c11",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/b97bd693-b877-4b8d-ab7b-21f713608c11/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "c02c2a1e-4c93-46b6-8af8-596ad4b09cd4",
+            "name": "Guest",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_MAB",
+              "id": "3ed563ea-89e6-4248-b997-9a4c8dcb1600",
+              "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/b97bd693-b877-4b8d-ab7b-21f713608c11/authentication/c02c2a1e-4c93-46b6-8af8-596ad4b09cd4",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "136f7b2d-2c98-41c9-bd49-0957ddee0651",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/b97bd693-b877-4b8d-ab7b-21f713608c11/authentication/136f7b2d-2c98-41c9-bd49-0957ddee0651",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/74df3935-6ddc-4efc-ba0f-f4ac6b2d30c8",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/74df3935-6ddc-4efc-ba0f-f4ac6b2d30c8/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "84850181-2162-4420-88ed-48aea51a86b0",
+            "name": "Guest",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "contains",
+              "dictionaryValue": null,
+              "attributeValue": "SWSGUEST01"
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "CONTINUE",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/74df3935-6ddc-4efc-ba0f-f4ac6b2d30c8/authentication/84850181-2162-4420-88ed-48aea51a86b0",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "846e4215-fa39-40d2-a49c-7990c7e09c71",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/74df3935-6ddc-4efc-ba0f-f4ac6b2d30c8/authentication/846e4215-fa39-40d2-a49c-7990c7e09c71",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9f379f4c-99a6-4564-be91-2d81fa283ca8",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9f379f4c-99a6-4564-be91-2d81fa283ca8/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "2f239175-f8f7-4869-8585-0e05a7ce4dab",
+            "name": "Guest",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_MAB",
+              "id": "3ed563ea-89e6-4248-b997-9a4c8dcb1600",
+              "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9f379f4c-99a6-4564-be91-2d81fa283ca8/authentication/2f239175-f8f7-4869-8585-0e05a7ce4dab",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "795eb899-5191-4d35-acc9-24f73c346801",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9f379f4c-99a6-4564-be91-2d81fa283ca8/authentication/795eb899-5191-4d35-acc9-24f73c346801",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ea6023c4-49dc-4e2e-af6e-f7ea060ce950",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ea6023c4-49dc-4e2e-af6e-f7ea060ce950/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "8f9598e2-c32c-4197-b66d-61b0085d26ec",
+            "name": "L3 Switch",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Network Access",
+              "attributeName": "NetworkDeviceName",
+              "operator": "contains",
+              "dictionaryValue": null,
+              "attributeValue": "r-de-stgs-b-ug-143"
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ea6023c4-49dc-4e2e-af6e-f7ea060ce950/authentication/8f9598e2-c32c-4197-b66d-61b0085d26ec",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "5e03e9c3-aa84-44b2-9fe1-f692c5695dbf",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ea6023c4-49dc-4e2e-af6e-f7ea060ce950/authentication/5e03e9c3-aa84-44b2-9fe1-f692c5695dbf",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/0fd1892e-5ffe-45fd-ba76-4a7b26bf8b98",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/0fd1892e-5ffe-45fd-ba76-4a7b26bf8b98/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "41bcc9a3-65f1-4011-b590-8b4ebfe69503",
+            "name": "Guest",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "contains",
+              "dictionaryValue": null,
+              "attributeValue": "SWSGUEST01"
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/0fd1892e-5ffe-45fd-ba76-4a7b26bf8b98/authentication/41bcc9a3-65f1-4011-b590-8b4ebfe69503",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "74dc8015-665e-4700-81d9-5b1583c4d30b",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/0fd1892e-5ffe-45fd-ba76-4a7b26bf8b98/authentication/74dc8015-665e-4700-81d9-5b1583c4d30b",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/1189e1d5-9a0f-4d17-ad78-524d90b48d48",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/1189e1d5-9a0f-4d17-ad78-524d90b48d48/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "17835b0c-8b85-4bc2-9b1d-45f084fcdebc",
+            "name": "Guest",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "contains",
+              "dictionaryValue": null,
+              "attributeValue": "SWSGUEST01"
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/1189e1d5-9a0f-4d17-ad78-524d90b48d48/authentication/17835b0c-8b85-4bc2-9b1d-45f084fcdebc",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "a8bb9041-4107-43ec-9dde-1555eb042fce",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/1189e1d5-9a0f-4d17-ad78-524d90b48d48/authentication/a8bb9041-4107-43ec-9dde-1555eb042fce",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/e7fb07a5-f135-4078-94c5-8f164e3c6fdb",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/e7fb07a5-f135-4078-94c5-8f164e3c6fdb/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "e73af8a4-711f-423b-9352-d80224cc0579",
+            "name": "Guest",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_802.1X",
+              "id": "a0d3ce4a-8c2e-473f-bf66-ab27619de4ed",
+              "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/e7fb07a5-f135-4078-94c5-8f164e3c6fdb/authentication/e73af8a4-711f-423b-9352-d80224cc0579",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "d9281211-1f7d-4a53-a1a5-2722e537db3a",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/e7fb07a5-f135-4078-94c5-8f164e3c6fdb/authentication/d9281211-1f7d-4a53-a1a5-2722e537db3a",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d2c7284a-5f26-41ef-9624-30275c7ff7e5",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d2c7284a-5f26-41ef-9624-30275c7ff7e5/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "09b040c7-bfb1-4794-a34a-ea5c31aa810f",
+            "name": "Mobile",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "contains",
+              "dictionaryValue": null,
+              "attributeValue": "SWSSAA01"
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d2c7284a-5f26-41ef-9624-30275c7ff7e5/authentication/09b040c7-bfb1-4794-a34a-ea5c31aa810f",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "50121720-4045-48f3-a9f3-baf1b30c414f",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d2c7284a-5f26-41ef-9624-30275c7ff7e5/authentication/50121720-4045-48f3-a9f3-baf1b30c414f",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/01159fb1-b1ca-4b35-9283-1af3874d9ef8",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/01159fb1-b1ca-4b35-9283-1af3874d9ef8/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "dea097c1-4429-4c9f-ae10-e42dde0e5fe6",
+            "name": "Mobile",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "contains",
+              "dictionaryValue": null,
+              "attributeValue": "SWSSAA01"
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/01159fb1-b1ca-4b35-9283-1af3874d9ef8/authentication/dea097c1-4429-4c9f-ae10-e42dde0e5fe6",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "6cc0dc7b-4123-4a27-b12c-0d9e4fbcbd17",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/01159fb1-b1ca-4b35-9283-1af3874d9ef8/authentication/6cc0dc7b-4123-4a27-b12c-0d9e4fbcbd17",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9dc7a429-aaa7-49b2-9aa3-a19aee2a9c9c",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9dc7a429-aaa7-49b2-9aa3-a19aee2a9c9c/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "33475258-e945-4a32-a1d6-7611fa463887",
+            "name": "Wireless Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_802.1X",
+              "id": "a0d3ce4a-8c2e-473f-bf66-ab27619de4ed",
+              "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9dc7a429-aaa7-49b2-9aa3-a19aee2a9c9c/authentication/33475258-e945-4a32-a1d6-7611fa463887",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "b2bf2c08-ec4a-4722-bef5-680a838ba577",
+            "name": "Wireless MAB",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_MAB",
+              "id": "3ed563ea-89e6-4248-b997-9a4c8dcb1600",
+              "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9dc7a429-aaa7-49b2-9aa3-a19aee2a9c9c/authentication/b2bf2c08-ec4a-4722-bef5-680a838ba577",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "1cf95cd3-bf06-4236-95ab-dd9742e0e7b7",
             "name": "Default",
             "hitCounts": 0,
             "rank": 2,
@@ -163,7 +1186,1047 @@
           "ifProcessFail": "DROP",
           "link": {
             "rel": "self",
-            "href": "https://10.48.30.215/api/v1/policy/network-access/policy-set/e5523017-a737-4b08-9590-2737b7c77ddc/authentication/c1b2c243-7d03-4857-83c9-19f668a46fa6",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9dc7a429-aaa7-49b2-9aa3-a19aee2a9c9c/authentication/1cf95cd3-bf06-4236-95ab-dd9742e0e7b7",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/906da95f-e015-4a3c-827f-661ae8b0073f",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/906da95f-e015-4a3c-827f-661ae8b0073f/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "a224d22a-deb0-45f6-84cc-5c4dcc48e41f",
+            "name": "Wireless Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "startsWith",
+              "dictionaryValue": null,
+              "attributeValue": "SW"
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/906da95f-e015-4a3c-827f-661ae8b0073f/authentication/a224d22a-deb0-45f6-84cc-5c4dcc48e41f",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "112af4a8-527a-4643-9ad2-a00f72f1b27a",
+            "name": "Wireless MAB",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "startsWith",
+              "dictionaryValue": null,
+              "attributeValue": "SW"
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/906da95f-e015-4a3c-827f-661ae8b0073f/authentication/112af4a8-527a-4643-9ad2-a00f72f1b27a",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "18bcd0bc-14d6-4018-899d-6bd1bdb1af39",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 2,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/906da95f-e015-4a3c-827f-661ae8b0073f/authentication/18bcd0bc-14d6-4018-899d-6bd1bdb1af39",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ad06bf7f-0a57-42cc-afec-47d0d9c48b18",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ad06bf7f-0a57-42cc-afec-47d0d9c48b18/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "1eea381c-51d2-49ed-9382-00d5d93d70f0",
+            "name": "Wireless Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "startsWith",
+              "dictionaryValue": null,
+              "attributeValue": "SW"
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ad06bf7f-0a57-42cc-afec-47d0d9c48b18/authentication/1eea381c-51d2-49ed-9382-00d5d93d70f0",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "bf9b2b0e-c06f-4b41-81cd-470b8516841c",
+            "name": "Wireless MAB",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAttributes",
+              "isNegate": false,
+              "dictionaryName": "Aruba",
+              "attributeName": "Aruba-Essid-Name",
+              "operator": "startsWith",
+              "dictionaryValue": null,
+              "attributeValue": "SW"
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ad06bf7f-0a57-42cc-afec-47d0d9c48b18/authentication/bf9b2b0e-c06f-4b41-81cd-470b8516841c",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "105acf4d-4f6e-46d4-a732-2eed3b2910c1",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 2,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/ad06bf7f-0a57-42cc-afec-47d0d9c48b18/authentication/105acf4d-4f6e-46d4-a732-2eed3b2910c1",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/bb2e3edc-b400-4c6c-946b-38f4ab21c25f",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/bb2e3edc-b400-4c6c-946b-38f4ab21c25f/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "32d14446-8765-4e2d-8c2d-6dac6c749e0b",
+            "name": "Wired Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wired_802.1X",
+              "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+              "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_CertProf_AD",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/bb2e3edc-b400-4c6c-946b-38f4ab21c25f/authentication/32d14446-8765-4e2d-8c2d-6dac6c749e0b",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "2bb81d8d-7336-4a17-994d-7c4ad082e09d",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/bb2e3edc-b400-4c6c-946b-38f4ab21c25f/authentication/2bb81d8d-7336-4a17-994d-7c4ad082e09d",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d39abc72-6797-48bc-b21f-6e024e5a11c8",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d39abc72-6797-48bc-b21f-6e024e5a11c8/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "7f394436-1656-43ff-8b68-039a3a218033",
+            "name": "Wired Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wired_802.1X",
+              "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+              "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d39abc72-6797-48bc-b21f-6e024e5a11c8/authentication/7f394436-1656-43ff-8b68-039a3a218033",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "29d641a4-86f9-49bd-9c4a-3970b28551b9",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d39abc72-6797-48bc-b21f-6e024e5a11c8/authentication/29d641a4-86f9-49bd-9c4a-3970b28551b9",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/553042cd-0747-4766-af8a-2b1d7c297d4d",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/553042cd-0747-4766-af8a-2b1d7c297d4d/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "20e47af3-fd8c-47d4-b966-487120dc246f",
+            "name": "Wired Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wired_802.1X",
+              "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+              "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/553042cd-0747-4766-af8a-2b1d7c297d4d/authentication/20e47af3-fd8c-47d4-b966-487120dc246f",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "862564a5-f11c-4cd7-9a5c-d633ce39ecac",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/553042cd-0747-4766-af8a-2b1d7c297d4d/authentication/862564a5-f11c-4cd7-9a5c-d633ce39ecac",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/14719067-943b-4a0f-aa22-ddc2d32be01b",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/14719067-943b-4a0f-aa22-ddc2d32be01b/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "81fd26e8-e80d-412c-83be-8f1699a2c7ac",
+            "name": "WiredMAB",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wired_MAB",
+              "id": "b8673a3f-caab-421f-b490-e4fc3a9218a3",
+              "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/14719067-943b-4a0f-aa22-ddc2d32be01b/authentication/81fd26e8-e80d-412c-83be-8f1699a2c7ac",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "4ab8df67-c339-4406-a4d2-2de459cf4a2a",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/14719067-943b-4a0f-aa22-ddc2d32be01b/authentication/4ab8df67-c339-4406-a4d2-2de459cf4a2a",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/1f771baf-b34a-4e03-be47-2b37354a8cf4",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/1f771baf-b34a-4e03-be47-2b37354a8cf4/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "1121c34d-1386-4e56-b5be-9f67d9bc8ea9",
+            "name": "Wireless Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_802.1X",
+              "id": "a0d3ce4a-8c2e-473f-bf66-ab27619de4ed",
+              "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/1f771baf-b34a-4e03-be47-2b37354a8cf4/authentication/1121c34d-1386-4e56-b5be-9f67d9bc8ea9",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "8f0a6311-3d10-4ea9-85a8-690bceb3f4b4",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/1f771baf-b34a-4e03-be47-2b37354a8cf4/authentication/8f0a6311-3d10-4ea9-85a8-690bceb3f4b4",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d20a7a45-24ab-4dbe-8bcc-625fcaf837f7",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d20a7a45-24ab-4dbe-8bcc-625fcaf837f7/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "d0947f6a-a4ee-4e73-91da-59d7c145399f",
+            "name": "Wireless Dot1x",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_802.1X",
+              "id": "a0d3ce4a-8c2e-473f-bf66-ab27619de4ed",
+              "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Siemens_ISS",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "DROP",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d20a7a45-24ab-4dbe-8bcc-625fcaf837f7/authentication/d0947f6a-a4ee-4e73-91da-59d7c145399f",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "eae2430e-6264-4608-b4f2-feeb90166a75",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/d20a7a45-24ab-4dbe-8bcc-625fcaf837f7/authentication/eae2430e-6264-4608-b4f2-feeb90166a75",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/be725450-8b0e-481c-b0ab-d377b98b945a",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/be725450-8b0e-481c-b0ab-d377b98b945a/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "e4082f91-ad6a-402d-9b10-b7c1703fba23",
+            "name": "Guest",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_MAB",
+              "id": "3ed563ea-89e6-4248-b997-9a4c8dcb1600",
+              "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/be725450-8b0e-481c-b0ab-d377b98b945a/authentication/e4082f91-ad6a-402d-9b10-b7c1703fba23",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "9ae4ae0f-b875-4756-aff0-0025222ccb0a",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/be725450-8b0e-481c-b0ab-d377b98b945a/authentication/9ae4ae0f-b875-4756-aff0-0025222ccb0a",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/c990a6f1-c6cc-4a5f-811f-a1e2ab280e19",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/c990a6f1-c6cc-4a5f-811f-a1e2ab280e19/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "077191ad-cf4a-4502-8c78-b027a36a74cb",
+            "name": "Guest",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_MAB",
+              "id": "3ed563ea-89e6-4248-b997-9a4c8dcb1600",
+              "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/c990a6f1-c6cc-4a5f-811f-a1e2ab280e19/authentication/077191ad-cf4a-4502-8c78-b027a36a74cb",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "01d6a092-61f7-4d8e-9e38-b6ed14c1786e",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/c990a6f1-c6cc-4a5f-811f-a1e2ab280e19/authentication/01d6a092-61f7-4d8e-9e38-b6ed14c1786e",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9d540763-3da0-4110-828c-9340a64395e8",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9d540763-3da0-4110-828c-9340a64395e8/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": true,
+            "id": "4864d541-0acc-4135-9f63-eb0941904833",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/9d540763-3da0-4110-828c-9340a64395e8/authentication/4864d541-0acc-4135-9f63-eb0941904833",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/a761a30b-e6cd-4145-8471-2f346bc44d55",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/a761a30b-e6cd-4145-8471-2f346bc44d55/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": true,
+            "id": "4d82b261-35ee-4ce6-99de-aa13c1c3cedc",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/a761a30b-e6cd-4145-8471-2f346bc44d55/authentication/4d82b261-35ee-4ce6-99de-aa13c1c3cedc",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/b549d676-0242-4a2e-ad31-59d2ba90912d",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/b549d676-0242-4a2e-ad31-59d2ba90912d/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": true,
+            "id": "07951064-90b9-46a4-9795-ec18589c941a",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "DeviceAdmin",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/b549d676-0242-4a2e-ad31-59d2ba90912d/authentication/07951064-90b9-46a4-9795-ec18589c941a",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/63100ef7-3a23-4a15-8f0f-d503fcac3f65",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/63100ef7-3a23-4a15-8f0f-d503fcac3f65/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": true,
+            "id": "bdefca03-fcee-4e45-92f6-6575b7db29db",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "DeviceAdmin",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/63100ef7-3a23-4a15-8f0f-d503fcac3f65/authentication/bdefca03-fcee-4e45-92f6-6575b7db29db",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/fac007e7-c23e-43b0-9450-fdf92de52c95",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/fac007e7-c23e-43b0-9450-fdf92de52c95/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": true,
+            "id": "c9d919d1-d6d5-43db-b548-d778f1ebf654",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "DeviceAdmin",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/fac007e7-c23e-43b0-9450-fdf92de52c95/authentication/c9d919d1-d6d5-43db-b548-d778f1ebf654",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/8dcc396d-36f7-4d87-a105-67ab9790ad27",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/8dcc396d-36f7-4d87-a105-67ab9790ad27/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": true,
+            "id": "833df9ab-7511-4c14-86ce-49f778eadb13",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "DeviceAdmin",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/8dcc396d-36f7-4d87-a105-67ab9790ad27/authentication/833df9ab-7511-4c14-86ce-49f778eadb13",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/7718cb71-2995-4560-b168-cbc20f7c879b",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/7718cb71-2995-4560-b168-cbc20f7c879b/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "3737ef02-0e9b-4493-a057-78ce6761d4a0",
+            "name": "Guest",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionReference",
+              "isNegate": false,
+              "name": "Wireless_MAB",
+              "id": "3ed563ea-89e6-4248-b997-9a4c8dcb1600",
+              "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile."
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/7718cb71-2995-4560-b168-cbc20f7c879b/authentication/3737ef02-0e9b-4493-a057-78ce6761d4a0",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "7f18a086-cc8f-477a-9189-57ab237a5d7c",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/7718cb71-2995-4560-b168-cbc20f7c879b/authentication/7f18a086-cc8f-477a-9189-57ab237a5d7c",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/fa0b9483-c489-4b9b-94d8-e35266144ae3",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/fa0b9483-c489-4b9b-94d8-e35266144ae3/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": true,
+            "id": "45598280-1f0b-421f-8f41-5e3bcf04f158",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/fa0b9483-c489-4b9b-94d8-e35266144ae3/authentication/45598280-1f0b-421f-8f41-5e3bcf04f158",
+            "type": "application/json"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "policy_set_href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/50d2588d-b6ed-4301-aafd-d5dc0cccc328",
+    "authentication_url": "https://10.48.30.212/api/v1/policy/network-access/policy-set/50d2588d-b6ed-4301-aafd-d5dc0cccc328/authentication",
+    "data": {
+      "version": "1.0.0",
+      "response": [
+        {
+          "rule": {
+            "default": false,
+            "id": "f04f8a5c-9ff2-426d-8163-7c4abc78c388",
+            "name": "ISE-probe",
+            "hitCounts": 0,
+            "rank": 0,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionAndBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "Radius",
+                  "attributeName": "User-Name",
+                  "operator": "contains",
+                  "dictionaryValue": null,
+                  "attributeValue": "dummy"
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionAttributes",
+                  "isNegate": false,
+                  "dictionaryName": "Network Access",
+                  "attributeName": "Protocol",
+                  "operator": "equals",
+                  "dictionaryValue": null,
+                  "attributeValue": "RADIUS"
+                }
+              ]
+            }
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "CONTINUE",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "CONTINUE",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/50d2588d-b6ed-4301-aafd-d5dc0cccc328/authentication/f04f8a5c-9ff2-426d-8163-7c4abc78c388",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "985aa154-0692-42a9-a749-e040153b1072",
+            "name": "MAB",
+            "hitCounts": 0,
+            "rank": 1,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionOrBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionReference",
+                  "isNegate": false,
+                  "name": "Wired_MAB",
+                  "id": "b8673a3f-caab-421f-b490-e4fc3a9218a3",
+                  "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionReference",
+                  "isNegate": false,
+                  "name": "Wireless_MAB",
+                  "id": "3ed563ea-89e6-4248-b997-9a4c8dcb1600",
+                  "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile."
+                }
+              ]
+            }
+          },
+          "identitySourceName": "Internal Endpoints",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "CONTINUE",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/50d2588d-b6ed-4301-aafd-d5dc0cccc328/authentication/985aa154-0692-42a9-a749-e040153b1072",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": false,
+            "id": "8de816fc-4297-4e6b-809a-da34a1a4d6bc",
+            "name": "Dot1X",
+            "hitCounts": 0,
+            "rank": 2,
+            "state": "enabled",
+            "condition": {
+              "link": null,
+              "conditionType": "ConditionOrBlock",
+              "isNegate": false,
+              "children": [
+                {
+                  "link": null,
+                  "conditionType": "ConditionReference",
+                  "isNegate": false,
+                  "name": "Wired_802.1X",
+                  "id": "c4927ed4-fea7-4940-a5ea-93b5db8b9c0f",
+                  "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+                },
+                {
+                  "link": null,
+                  "conditionType": "ConditionReference",
+                  "isNegate": false,
+                  "name": "Wireless_802.1X",
+                  "id": "a0d3ce4a-8c2e-473f-bf66-ab27619de4ed",
+                  "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
+                }
+              ]
+            }
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/50d2588d-b6ed-4301-aafd-d5dc0cccc328/authentication/8de816fc-4297-4e6b-809a-da34a1a4d6bc",
+            "type": "application/json"
+          }
+        },
+        {
+          "rule": {
+            "default": true,
+            "id": "27c55256-be45-432d-957d-a20cbd7ece75",
+            "name": "Default",
+            "hitCounts": 0,
+            "rank": 3,
+            "state": "enabled",
+            "condition": null
+          },
+          "identitySourceName": "All_User_ID_Stores",
+          "ifAuthFail": "REJECT",
+          "ifUserNotFound": "REJECT",
+          "ifProcessFail": "DROP",
+          "link": {
+            "rel": "self",
+            "href": "https://10.48.30.212/api/v1/policy/network-access/policy-set/50d2588d-b6ed-4301-aafd-d5dc0cccc328/authentication/27c55256-be45-432d-957d-a20cbd7ece75",
             "type": "application/json"
           }
         }
