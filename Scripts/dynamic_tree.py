@@ -260,6 +260,7 @@ class DynamicISETreeGenerator:
                     'rule_rank': rule['rank'],
                     'rule_name': rule['rule_name'],
                     'rule_id': rule['rule_id'],
+                    'state': rule['state'],
                     'attributes': rule['attributes']
                 })
                 continue
@@ -302,6 +303,7 @@ class DynamicISETreeGenerator:
                             'rule_rank': rule['rank'],
                             'rule_name': rule['rule_name'],
                             'rule_id': rule['rule_id'],
+                            'state': rule['state'],
                             'attributes': rule['attributes']
                         })
                         continue  # Don't append to the main list
@@ -313,6 +315,7 @@ class DynamicISETreeGenerator:
                             'rule_rank': rule['rank'],
                             'rule_name': rule['rule_name'],
                             'rule_id': rule['rule_id'],
+                            'state': rule['state'],
                             'attributes': rule['attributes']
                         })
                 else:
@@ -398,13 +401,22 @@ class DynamicISETreeGenerator:
                         for result in content:
                             result_node_id = f'N{node_counter}'
                             node_counter += 1
-                            node_map[result_node_id] = 'result'
+
+                            # Check if rule is disabled
+                            state = result.get('state', 'enabled')
+                            is_disabled = state != 'enabled'
+
+                            # Use different style for disabled rules
+                            node_map[result_node_id] = 'disabledResult' if is_disabled else 'result'
 
                             profile = result['result']
                             rule_name = result['rule_name']
                             rank = result['rule_rank']
 
-                            lines.append(f'    {result_node_id}[<b>Profile:</b> {profile}<br/><b>Rule:</b> {rule_name}<br/><b>Rank:</b> {rank}]')
+                            # Add DISABLED badge if not enabled
+                            disabled_badge = '<br/><b>&#9888; DISABLED</b>' if is_disabled else ''
+
+                            lines.append(f'    {result_node_id}[<b>Profile:</b> {profile}<br/><b>Rule:</b> {rule_name}<br/><b>Rank:</b> {rank}{disabled_badge}]')
                             connections.append(f'    {node_id} -->|Match| {result_node_id}')
 
                     # Check if content is a dict (more levels or mixed)
@@ -414,13 +426,22 @@ class DynamicISETreeGenerator:
                             for result in content['_results_']:
                                 result_node_id = f'N{node_counter}'
                                 node_counter += 1
-                                node_map[result_node_id] = 'result'
+
+                                # Check if rule is disabled
+                                state = result.get('state', 'enabled')
+                                is_disabled = state != 'enabled'
+
+                                # Use different style for disabled rules
+                                node_map[result_node_id] = 'disabledResult' if is_disabled else 'result'
 
                                 profile = result['result']
                                 rule_name = result['rule_name']
                                 rank = result['rule_rank']
 
-                                lines.append(f'    {result_node_id}[<b>Profile:</b> {profile}<br/><b>Rule:</b> {rule_name}<br/><b>Rank:</b> {rank}]')
+                                # Add DISABLED badge if not enabled
+                                disabled_badge = '<br/><b>&#9888; DISABLED</b>' if is_disabled else ''
+
+                                lines.append(f'    {result_node_id}[<b>Profile:</b> {profile}<br/><b>Rule:</b> {rule_name}<br/><b>Rank:</b> {rank}{disabled_badge}]')
                                 connections.append(f'    {node_id} -->|Match| {result_node_id}')
 
                         # Continue traversing deeper levels
@@ -440,12 +461,17 @@ class DynamicISETreeGenerator:
         for style_name, style_def in level_colors:
             lines.append(f'    classDef {style_name} {style_def}')
         lines.append('    classDef resultStyle fill:#ffebee,stroke:#b71c1c,stroke-width:2px,color:#000')
+        lines.append('    classDef disabledResultStyle fill:#4a5568,stroke:#718096,stroke-width:2px,stroke-dasharray:5 5,color:#a0aec0')
         lines.append('')
         lines.append('    class Start startStyle')
 
         # Apply styles to nodes
         for node_id, style_name in node_map.items():
-            lines.append(f'    class {node_id} {style_name}')
+            # Add 'Style' suffix if it's a result/disabledResult
+            if style_name in ['result', 'disabledResult']:
+                lines.append(f'    class {node_id} {style_name}Style')
+            else:
+                lines.append(f'    class {node_id} {style_name}')
 
         return '\n'.join(lines)
 
